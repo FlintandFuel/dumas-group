@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Dumas Group South Africa</title>
+    <!--
+      GitHub Pages has no server-side rewrites, so a direct load or refresh on a client-side
+      route (e.g. /our-companies) 404s. This is the standard spa-github-pages redirect trick:
+      encode the real path into a query string and bounce to index.html, which restores it
+      via history.replaceState before React mounts. See index.html's inline script.
+    -->
+    <script>
+      var path = location.pathname + location.search + location.hash;
+      location.replace('/?redirect=' + encodeURIComponent(path));
+    </script>
+  </head>
+  <body></body>
+</html>
