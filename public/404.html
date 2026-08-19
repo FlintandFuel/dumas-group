@@ -10,8 +10,9 @@
       via history.replaceState before React mounts. See index.html's inline script.
     -->
     <script>
+      var base = '/dumas-group/';
       var path = location.pathname + location.search + location.hash;
-      location.replace('/?redirect=' + encodeURIComponent(path));
+      location.replace(base + '?redirect=' + encodeURIComponent(path));
     </script>
   </head>
   <body></body>

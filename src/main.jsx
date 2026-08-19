@@ -14,7 +14,7 @@ requestAnimationFrame(raf)
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/dumas-group">
       <App />
     </BrowserRouter>
   </StrictMode>,
