@@ -13,9 +13,6 @@ export const contact = {
 }
 
 export const proofFigures = [
-  { value: '500,000t', label: 'Coal exported annually' },
-  { value: '300,000t', label: 'Coal supplied domestically' },
-  { value: '120,000t', label: 'Chrome produced annually' },
   { value: '12+', label: 'Export markets served' },
   { value: '60+ yrs', label: 'Combined geological experience' },
   { value: '2008', label: 'Group established' },

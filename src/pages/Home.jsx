@@ -106,7 +106,7 @@ function ProofBar() {
           whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
           variants={stagger}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-6 gap-y-10"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-10 max-w-2xl mx-auto sm:mx-0"
         >
           {proofFigures.map((f) => (
             <motion.div key={f.label} variants={fadeUpItem} className="text-center sm:text-left">
@@ -300,7 +300,7 @@ function Capital() {
             <div className="p-7">
               <h3 className="font-display font-semibold text-white text-lg mb-2">AET Group</h3>
               <p className="text-[#B7BBBF] leading-[1.75] font-light text-[14px]">
-                Renewable and off-grid power development, including EPC capability, addressing the regional power shortfall across SADC SAPP.
+                Renewable and off-grid power development, including EPC capability, addressing the regional power shortfall across SAPP.
               </p>
             </div>
           </FadeUp>

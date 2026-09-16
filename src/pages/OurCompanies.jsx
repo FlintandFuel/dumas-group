@@ -5,7 +5,7 @@ import Organogram from '../components/Organogram'
 import SectorGroup from '../components/SectorGroup'
 import CapabilityPackCTA from '../components/CapabilityPackCTA'
 
-const SHOW_GAPS = true
+const SHOW_GAPS = false
 
 export default function OurCompanies() {
   const sectionFocusRefs = useRef({})

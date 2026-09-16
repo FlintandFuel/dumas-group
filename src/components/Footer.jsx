@@ -39,19 +39,13 @@ export default function Footer() {
         </div>
 
         <div className="mt-16 pt-6 border-t border-white/10">
-          <p className="text-[11px] text-white/25 leading-relaxed text-center md:text-left">
-            &copy; {new Date().getFullYear()} Dumas Group South Africa. All rights reserved.
+          <p className="text-[11px] text-white/25 leading-relaxed text-center">
+            &copy; {new Date().getFullYear()} Dumas Group South Africa. All rights reserved. &middot; Website design by{' '}
+            <a href="https://flintandfuel.co.za" target="_blank" rel="noopener" className="underline hover:text-white/50 transition-colors">
+              Flint and Fuel Creative
+            </a>
           </p>
         </div>
-      </div>
-
-      <div className="border-t border-white/10 py-4">
-        <p className="text-[11px] text-white/25 text-center">
-          Website design by{' '}
-          <a href="https://flintandfuel.co.za" target="_blank" rel="noopener" className="underline hover:text-white/50 transition-colors">
-            Flint and Fuel Creative
-          </a>
-        </p>
       </div>
     </footer>
   )
