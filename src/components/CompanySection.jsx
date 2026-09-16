@@ -29,7 +29,7 @@ function ExpandableDetail({ points }) {
 }
 
 export default function CompanySection({ company, showGaps, sectionFocusRefs, delay = 0, nested = false }) {
-  const { slug, name, formalName, role, body, image, logo, logoHeight, region, founded, detailPoints, placeholder } = company
+  const { slug, name, formalName, role, body, image, logo, logoHeight, region, founded, detailPoints, placeholder, project, subProducts } = company
   const children = childrenOf(slug)
   const Heading = nested ? 'h4' : 'h3'
 
@@ -85,15 +85,38 @@ export default function CompanySection({ company, showGaps, sectionFocusRefs, de
 
               <CompanyAction company={company} />
               {!company.externalUrl && detailPoints && <ExpandableDetail points={detailPoints} />}
+
+              {subProducts && (
+                <div className="mt-6 space-y-6">
+                  {subProducts.map((p) => (
+                    <div key={p.name}>
+                      <h4 className="font-display font-semibold text-[#16171A] text-base mb-1.5">
+                        {p.name}
+                        {p.mark && <sup className="ml-0.5 text-[10px]">{p.mark}</sup>}
+                      </h4>
+                      <p className="text-[#4B4F54] leading-[1.7] font-light text-[14px]">{p.body}</p>
+                    </div>
+                  ))}
+                </div>
+              )}
             </>
           )}
 
-          <ContentGapZone
-            label={`CONTENT GAP: ${name.toUpperCase()}`}
-            company={company}
-            lines={company.gaps}
-            visible={showGaps}
-          />
+          {project ? (
+            <div className="mt-6 border border-dashed border-[#8A8F94] px-5 py-5 md:px-6 md:py-6">
+              <p className="font-mono text-[10px] font-semibold tracking-[0.2em] uppercase text-[#8A8F94] mb-2">
+                {project.name}
+              </p>
+              <p className="text-[#4B4F54] leading-[1.7] font-light text-[14px] italic">{project.body}</p>
+            </div>
+          ) : (
+            <ContentGapZone
+              label={`CONTENT GAP: ${name.toUpperCase()}`}
+              company={company}
+              lines={company.gaps}
+              visible={showGaps}
+            />
+          )}
         </div>
       </div>
 

@@ -27,8 +27,8 @@ export default function ProjectsPage() {
 
       <section className="relative bg-[#F2F2EF] pb-24 md:pb-32">
         <div className="max-w-[1180px] mx-auto px-6 md:px-10">
-          <div className="grid md:grid-cols-3 gap-6">
-            {caseStudies.map((cs, i) => <CaseStudyCard key={cs.title} cs={cs} delay={i * 0.08} />)}
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl">
+            {caseStudies.map((cs, i) => <CaseStudyCard key={i} cs={cs} delay={i * 0.08} />)}
           </div>
         </div>
       </section>

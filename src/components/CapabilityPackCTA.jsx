@@ -34,12 +34,9 @@ export default function CapabilityPackCTA({ number = '—' }) {
           <div className="lg:col-span-5">
             <FadeUp>
               <SectionLabel number={number} label="Capability Pack" dark />
-              <h2 className="font-display font-semibold text-white leading-[1.1] mb-6" style={{ fontSize: 'clamp(1.75rem, 3.2vw, 3rem)' }}>
+              <h2 className="font-display font-semibold text-white leading-[1.1]" style={{ fontSize: 'clamp(1.75rem, 3.2vw, 3rem)' }}>
                 The detail sits in our capability pack
               </h2>
-              <p className="text-[#B7BBBF] leading-[1.8] font-light" style={{ fontSize: '1.0625rem' }}>
-                Volumes, grades, logistics capacity and current availability. Sent directly, not published.
-              </p>
             </FadeUp>
           </div>
 

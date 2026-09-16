@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import { motion, useReducedMotion, AnimatePresence } from 'framer-motion'
 import { FadeUp, SectionLabel, stagger, fadeUpItem, img, usePageMeta } from '../lib/shared'
-import { proofFigures, valueChain, commodities, timeline, caseStudies, faqs } from '../content/dumas'
+import { proofFigures, valueChain, timeline, caseStudies, faqs } from '../content/dumas'
 import { companies } from '../content/companies'
-import CommodityTeaserCard from '../components/CommodityTeaserCard'
 import CaseStudyCard from '../components/CaseStudyCard'
 import GroupStructureSection from '../components/GroupStructureSection'
 import CapabilityPackCTA from '../components/CapabilityPackCTA'
@@ -13,11 +12,6 @@ import CapabilityPackCTA from '../components/CapabilityPackCTA'
 // =====================================================================
 function Hero() {
   const reduced = useReducedMotion()
-
-  const scrollToProof = (e) => {
-    e.preventDefault()
-    document.getElementById('proof')?.scrollIntoView({ behavior: reduced ? 'auto' : 'smooth' })
-  }
 
   return (
     <section id="hero">
@@ -47,9 +41,9 @@ function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.85, delay: 0.28, ease: [0.22, 1, 0.36, 1] }}
             className="font-display text-white leading-[1.05] mb-8 mx-auto font-semibold"
-            style={{ fontSize: 'clamp(2.25rem, 5.2vw, 4.5rem)', maxWidth: '20ch' }}
+            style={{ fontSize: 'clamp(2.25rem, 5.2vw, 4.5rem)', maxWidth: '26ch' }}
           >
-            One contract between the quote and the cargo
+            Dumas Group - A Johannesburg-Based Holding Company Building the Future of Minerals, Energy and Housing.
           </motion.h1>
 
           <motion.p
@@ -73,14 +67,6 @@ function Hero() {
               className="inline-flex items-center min-h-[44px] font-mono text-[11px] font-semibold tracking-[0.2em] uppercase px-7 py-3 bg-white text-[#0A0B0D] hover:bg-[#C7CBCF] transition-all duration-200"
             >
               Request the Capability Pack
-            </a>
-            <a
-              href="#proof"
-              onClick={scrollToProof}
-              className="inline-flex items-center gap-2.5 min-h-[44px] font-mono text-[11px] font-medium tracking-[0.2em] uppercase text-[#9BA0A6] hover:text-white transition-colors duration-200"
-            >
-              See What We Move
-              <span className="w-5 h-px bg-current" />
             </a>
           </motion.div>
         </div>
@@ -151,14 +137,14 @@ function Integration() {
                 className="font-display font-semibold text-[#16171A] leading-[1.1]"
                 style={{ fontSize: 'clamp(1.75rem, 3.2vw, 3rem)' }}
               >
-                One phone call moves the whole chain, not just one piece of it
+                To Be Confirmed
               </h2>
             </FadeUp>
           </div>
           <div className="lg:col-span-7 lg:pt-2">
             <FadeUp delay={0.08}>
               <p className="text-[#4B4F54] leading-[1.85] font-light" style={{ fontSize: '1.0625rem' }}>
-                Mining rights. Wash plants. Rail and road. Port. We operate each stage ourselves or through partnerships built over thirty-five years. That means when we commit to a tonnage and a date, there is nobody standing between the promise and the delivery. Roughly 1,600 tons move every day. Around 20,000 tons pass through port each month.
+                To be confirmed.
               </p>
             </FadeUp>
           </div>
@@ -194,31 +180,6 @@ function Integration() {
             ))}
           </div>
         </FadeUp>
-      </div>
-    </section>
-  )
-}
-
-// =====================================================================
-// COMMODITIES (teaser)
-// =====================================================================
-function CommoditiesTeaser() {
-  const images = { coal: 'coal-excavator.jpg', chrome: 'chrome-ore1.jpg', limestone: 'limestone-quarry.jpg' }
-  return (
-    <section id="commodities" className="relative bg-[#FAFAF8] py-24 md:py-32 border-t border-[#E2E3E1] scroll-mt-16">
-      <div className="max-w-[1180px] mx-auto px-6 md:px-10">
-        <FadeUp className="mb-14 md:mb-16">
-          <SectionLabel number="02" label="Commodities" />
-          <h2 className="font-display font-semibold text-[#16171A] leading-[1.1] mb-5" style={{ fontSize: 'clamp(1.75rem, 3.2vw, 3rem)' }}>
-            Coal, chrome and limestone
-          </h2>
-        </FadeUp>
-
-        <div className="grid md:grid-cols-3 gap-10 md:gap-8">
-          {commodities.map((c, i) => (
-            <CommodityTeaserCard key={c.slug} c={c} image={images[c.slug]} delay={i * 0.08} />
-          ))}
-        </div>
       </div>
     </section>
   )
@@ -306,8 +267,8 @@ function Projects() {
             Our experience over the years
           </h2>
         </FadeUp>
-        <div className="grid md:grid-cols-3 gap-6">
-          {caseStudies.map((cs, i) => <CaseStudyCard key={cs.title} cs={cs} delay={i * 0.08} />)}
+        <div className="grid md:grid-cols-2 gap-6 max-w-3xl">
+          {caseStudies.map((cs, i) => <CaseStudyCard key={i} cs={cs} delay={i * 0.08} />)}
         </div>
       </div>
     </section>
@@ -327,7 +288,7 @@ function Capital() {
             Capability, not forecasts
           </h2>
           <p className="text-[#B7BBBF] leading-[1.8] font-light" style={{ fontSize: '1.0625rem' }}>
-            AET Group, Boffin and our EPC capability address two real shortfalls: power across the SADC region, and student accommodation in South Africa.
+            AET Group, Boffin and our EPC capability address two real shortfalls: power across the SADC region, and housing in South Africa.
           </p>
         </FadeUp>
 
@@ -339,7 +300,7 @@ function Capital() {
             <div className="p-7">
               <h3 className="font-display font-semibold text-white text-lg mb-2">AET Group</h3>
               <p className="text-[#B7BBBF] leading-[1.75] font-light text-[14px]">
-                Renewable and off-grid power development, including EPC capability, addressing the regional power shortfall across SADC.
+                Renewable and off-grid power development, including EPC capability, addressing the regional power shortfall across SADC SAPP.
               </p>
             </div>
           </FadeUp>
@@ -350,7 +311,7 @@ function Capital() {
             <div className="p-7">
               <h3 className="font-display font-semibold text-white text-lg mb-2">Boffin</h3>
               <p className="text-[#B7BBBF] leading-[1.75] font-light text-[14px]">
-                Property development, addressing the South African student accommodation shortfall.
+                Property development, addressing the South African housing shortfall.
               </p>
             </div>
           </FadeUp>
@@ -433,7 +394,6 @@ export default function Home() {
       <Hero />
       <ProofBar />
       <Integration />
-      <CommoditiesTeaser />
       <Timeline />
       <Projects />
       <GroupStructureSection />

@@ -6,8 +6,6 @@ import { img } from '../lib/shared'
 const links = [
   { label: 'Home', to: '/' },
   { label: 'Our Companies', to: '/our-companies' },
-  { label: 'Commodities', to: '/commodities' },
-  { label: 'Projects', to: '/projects' },
   { label: 'CSI', to: '/corporate-social-investment' },
   { label: 'Contact', to: '/contact' },
 ]

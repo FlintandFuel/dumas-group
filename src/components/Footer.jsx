@@ -5,8 +5,6 @@ import { contact } from '../content/dumas'
 const navLinks = [
   ['Home', '/'],
   ['Our Companies', '/our-companies'],
-  ['Commodities', '/commodities'],
-  ['Projects', '/projects'],
   ['CSI', '/corporate-social-investment'],
   ['Contact', '/contact'],
 ]
@@ -18,10 +16,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-12 gap-12 md:gap-16">
           <div className="md:col-span-4">
             <img src={img('logo-white.png')} alt="Dumas Group" className="w-auto mb-4" style={{ height: '55px' }} />
-            <p className="text-sm text-white/70 font-medium mb-4">{contact.tagline}</p>
-            <p className="text-sm text-white/55 leading-[1.75] max-w-xs font-light">
-              South African mining and industrial holding group. Coal, chrome and limestone. Rights, extraction, processing and export, owned within the group.
-            </p>
+            <p className="text-sm text-white/70 font-medium">{contact.tagline}</p>
           </div>
 
           <div className="md:col-span-3">
