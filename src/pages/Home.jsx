@@ -46,20 +46,10 @@ function Hero() {
             Dumas Group - A Johannesburg-Based Holding Company building the future of Minerals, Energy and Housing.
           </motion.h1>
 
-          <motion.p
-            initial={reduced ? false : { opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.85 }}
-            className="text-[#C7CBCF] leading-[1.75] mx-auto mb-12 font-light"
-            style={{ fontSize: '1.0625rem', maxWidth: '52ch' }}
-          >
-            Dumas Group - A Johannesburg-Based Holding Company building the future of Minerals, Energy and Housing.
-          </motion.p>
-
           <motion.div
             initial={reduced ? false : { opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.0 }}
+            transition={{ duration: 0.6, delay: 0.85 }}
             className="flex flex-wrap gap-5 items-center justify-center"
           >
             <a
