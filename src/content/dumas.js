@@ -75,7 +75,7 @@ export const timeline = [
   { year: '2008', fact: 'Dumas Group established.' },
   { year: '2012', fact: 'Nyezi Mining Holdings founded.' },
   { year: '2014', fact: 'DVP Hub established.' },
-  { year: '2015', fact: 'Campbell Limestone Project acquired. Northern Cape.' },
+  { year: '2015', fact: 'Campbell Limestone Project acquired: Northern Cape.' },
   { year: '2017', fact: 'AET Group founded. Off-grid and renewable energy capability.' },
   { year: '2021', fact: 'Nyezi Steel and Apexion established.' },
   { year: '2022', fact: 'Boffin established.' },
@@ -83,14 +83,24 @@ export const timeline = [
 
 export const caseStudies = [
   {
-    title: 'To Be Confirmed',
-    placeholder: true,
-    body: 'To be confirmed.',
+    title: 'Campbell Limestone Project',
+    sector: 'Mining',
+    objection: 'Do you understand your product beyond digging it up?',
+    meta: { period: 'Ongoing', commodity: 'Limestone', place: 'Northern Cape, South Africa', role: 'Owner-operator' },
+    context: 'Development of a metallurgical and industrial-grade limestone asset in the Northern Cape, supplying flue-gas desulphurisation and industrial buyers.',
+    owned: 'Mining rights and extraction, with grade and purity specification under Nyezi Mining Holdings.',
+    outcome: 'Established supply relationship with domestic power utility offtake.',
+    pending: 'CaCO₃ purity, grade and receiving application pending confirmation.',
   },
   {
-    title: 'To Be Confirmed',
-    placeholder: true,
-    body: 'To be confirmed.',
+    title: 'AET off-grid power, Namibia',
+    sector: 'Energy',
+    objection: 'Are you a declining coal business, or a group with a next act?',
+    meta: { period: 'In development', commodity: 'Renewable energy', place: 'Namibia', role: 'Developer' },
+    context: 'An off-grid power project addressing the regional power shortfall, developed under AET Group’s renewable energy and EPC capability.',
+    owned: 'Project development and technical capability under AET Group.',
+    outcome: 'Project in active development.',
+    pending: 'Installed or planned capacity (MW/MWh), technology mix and project stage pending confirmation.',
   },
 ]
 
@@ -99,27 +109,27 @@ export const caseStudies = [
 
 export const faqs = [
   {
-    q: 'Do you own the mining rights, or broker them?',
+    q: 'What companies and sectors sit under the Dumas Group holding structure?',
     a: 'To be confirmed.',
   },
   {
-    q: 'What volume can you commit to, and over what term?',
+    q: 'Who owns and controls the group?',
     a: 'To be confirmed.',
   },
   {
-    q: 'How does product reach port?',
+    q: 'Is Dumas Group open to investment, partnership or acquisition?',
     a: 'To be confirmed.',
   },
   {
-    q: 'What grades and specifications do you supply?',
+    q: 'How is the group governed, and how are subsidiaries audited?',
     a: 'To be confirmed.',
   },
   {
-    q: 'Which markets do you currently serve?',
+    q: 'What is the group’s financial and operating track record?',
     a: 'To be confirmed.',
   },
   {
-    q: 'Who handles licensing and compliance?',
+    q: 'Who do we speak to, and what happens next?',
     a: 'To be confirmed.',
   },
 ]

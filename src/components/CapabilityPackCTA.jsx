@@ -35,7 +35,7 @@ export default function CapabilityPackCTA({ number = '—' }) {
             <FadeUp>
               <SectionLabel number={number} label="Capability Pack" dark />
               <h2 className="font-display font-semibold text-white leading-[1.1]" style={{ fontSize: 'clamp(1.75rem, 3.2vw, 3rem)' }}>
-                The detail sits in our capability pack
+                Get the full picture
               </h2>
             </FadeUp>
           </div>

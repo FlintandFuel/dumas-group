@@ -12,6 +12,11 @@ export default function CaseStudyCard({ cs, delay }) {
 
   return (
     <FadeUp delay={delay} className="bg-white border border-[#E2E3E1] p-8 md:p-9 flex flex-col h-full">
+      {cs.sector && (
+        <span className="inline-block self-start font-mono text-[10px] font-semibold tracking-[0.18em] uppercase text-white bg-[#16171A] px-2.5 py-1 mb-3">
+          {cs.sector}
+        </span>
+      )}
       <p className="font-mono text-[10px] tracking-[0.18em] uppercase text-[#8A8F94] mb-3">
         {cs.meta.period} &middot; {cs.meta.commodity} &middot; {cs.meta.place} &middot; {cs.meta.role}
       </p>

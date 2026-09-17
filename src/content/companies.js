@@ -20,7 +20,7 @@ export const companies = [
     logo: 'companies-logos_1.webp',
     externalUrl: 'https://nyezimining.co.za/',
     founded: null,
-    region: 'Mpumalanga, North West, Free State, Gauteng, Northern Cape',
+    region: null,
     parent: 'dumas-group',
     children: [],
     project: {

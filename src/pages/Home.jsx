@@ -33,7 +33,7 @@ function Hero() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="font-mono text-[11px] font-medium tracking-[0.28em] uppercase text-[#9BA0A6] mb-8"
           >
-            South African Mining &amp; Industrial Group &middot; Est. 2008
+            Dumas Group | Innovation Partner
           </motion.p>
 
           <motion.h1
@@ -43,7 +43,7 @@ function Hero() {
             className="font-display text-white leading-[1.05] mb-8 mx-auto font-semibold"
             style={{ fontSize: 'clamp(2.25rem, 5.2vw, 4.5rem)', maxWidth: '26ch' }}
           >
-            Dumas Group - A Johannesburg-Based Holding Company Building the Future of Minerals, Energy and Housing.
+            Dumas Group - A Johannesburg-Based Holding Company building the future of Minerals, Energy and Housing.
           </motion.h1>
 
           <motion.p
@@ -53,7 +53,7 @@ function Hero() {
             className="text-[#C7CBCF] leading-[1.75] mx-auto mb-12 font-light"
             style={{ fontSize: '1.0625rem', maxWidth: '52ch' }}
           >
-            Dumas Group is a South African mining and industrial group. Coal, chrome and limestone. From mining rights in Mpumalanga and the Northern Cape to buyers in twelve countries.
+            Dumas Group - A Johannesburg-Based Holding Company building the future of Minerals, Energy and Housing.
           </motion.p>
 
           <motion.div
@@ -334,7 +334,7 @@ function FAQ() {
         <FadeUp className="mb-14">
           <SectionLabel number="07" label="What Buyers Ask Us" />
           <h2 className="font-display font-semibold text-[#16171A] leading-[1.1]" style={{ fontSize: 'clamp(1.75rem, 3.2vw, 3rem)' }}>
-            Common questions
+            Common Questions - To be confirmed
           </h2>
         </FadeUp>
 
