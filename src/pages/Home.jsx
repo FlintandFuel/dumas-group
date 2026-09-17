@@ -33,7 +33,7 @@ function Hero() {
             transition={{ duration: 0.6, delay: 0.15 }}
             className="font-mono text-[11px] font-medium tracking-[0.28em] uppercase text-[#9BA0A6] mb-8"
           >
-            Dumas Group | Innovation Partner
+            Established 2008
           </motion.p>
 
           <motion.h1

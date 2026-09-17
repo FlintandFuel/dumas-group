@@ -16,7 +16,10 @@ export default function Footer() {
         <div className="grid md:grid-cols-12 gap-12 md:gap-16">
           <div className="md:col-span-4">
             <img src={img('logo-white.png')} alt="Dumas Group" className="w-auto mb-4" style={{ height: '55px' }} />
-            <p className="text-sm text-white/70 font-medium">{contact.tagline}</p>
+            <p className="text-sm text-white/70 font-medium mb-3">{contact.tagline}</p>
+            <p className="text-sm text-white/45 leading-relaxed font-light max-w-xs">
+              Dumas Group - A Johannesburg-Based Holding Company building the future of Minerals, Energy and Housing.
+            </p>
           </div>
 
           <div className="md:col-span-3">
