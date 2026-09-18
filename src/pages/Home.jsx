@@ -70,8 +70,8 @@ function Hero() {
         className="relative w-full aspect-[16/8] md:aspect-[16/6] overflow-hidden bg-[#0A0B0D]"
       >
         <img
-          src={img('coal-excavator.jpg')}
-          alt="Bucket-wheel excavator working a coal stockpile"
+          src={img('background.webp')}
+          alt="Aerial view of an open-pit mining and quarry operation"
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: 'grayscale(35%) contrast(1.05)' }}
           fetchPriority="high"
@@ -96,10 +96,10 @@ function ProofBar() {
           whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
           variants={stagger}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-10 max-w-2xl mx-auto sm:mx-0"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-10 max-w-2xl mx-auto"
         >
           {proofFigures.map((f) => (
-            <motion.div key={f.label} variants={fadeUpItem} className="text-center sm:text-left">
+            <motion.div key={f.label} variants={fadeUpItem} className="text-center">
               <p className="font-poppins font-semibold text-white leading-none whitespace-nowrap" style={{ fontSize: 'clamp(1.375rem, 2.2vw, 1.875rem)' }}>
                 {f.value}
               </p>
