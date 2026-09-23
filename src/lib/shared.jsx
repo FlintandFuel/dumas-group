@@ -36,14 +36,10 @@ export const fadeUpItem = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
 }
 
-export function SectionLabel({ number, label, dark = false }) {
+export function SectionLabel({ label, dark = false }) {
   const tint = dark ? 'text-[#9BA0A6]' : 'text-[#71767C]'
-  const line = dark ? 'bg-[#9BA0A6]' : 'bg-[#71767C]'
-  const hasNumber = number && number !== '—'
   return (
-    <p className={`font-mono flex items-center gap-3 text-[11px] font-medium tracking-[0.22em] uppercase ${tint} mb-6 select-none`}>
-      {hasNumber && <span>{number}</span>}
-      <span className={`w-6 h-px inline-block ${line}`} />
+    <p className={`font-mono text-[11px] font-medium tracking-[0.22em] uppercase ${tint} mb-6 select-none`}>
       {label}
     </p>
   )

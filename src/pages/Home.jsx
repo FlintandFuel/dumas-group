@@ -1,7 +1,8 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { motion, useReducedMotion, AnimatePresence } from 'framer-motion'
+import { User } from 'lucide-react'
 import { FadeUp, SectionLabel, stagger, fadeUpItem, img, usePageMeta } from '../lib/shared'
-import { proofFigures, valueChain, timeline, caseStudies, faqs } from '../content/dumas'
+import { proofFigures, valueChain, timeline, caseStudies, faqs, team } from '../content/dumas'
 import { companies } from '../content/companies'
 import CaseStudyCard from '../components/CaseStudyCard'
 import GroupStructureSection from '../components/GroupStructureSection'
@@ -31,7 +32,7 @@ function Hero() {
             initial={reduced ? false : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="font-mono text-[11px] font-medium tracking-[0.28em] uppercase text-[#9BA0A6] mb-8"
+            className="font-mono text-[16px] font-medium tracking-[0.28em] uppercase text-[#9BA0A6] mb-8"
           >
             Established 2008
           </motion.p>
@@ -43,7 +44,7 @@ function Hero() {
             className="font-display text-white leading-[1.05] mb-8 mx-auto font-semibold"
             style={{ fontSize: 'clamp(2.25rem, 5.2vw, 4.5rem)', maxWidth: '26ch' }}
           >
-            Dumas Group - A Johannesburg-Based Holding Company building the future of Minerals, Energy and Housing.
+            Dumas Group is a diversified holdings company, investing in the foundation of long-term growth.
           </motion.h1>
 
           <motion.div
@@ -61,25 +62,6 @@ function Hero() {
           </motion.div>
         </div>
       </div>
-
-      <motion.div
-        initial={reduced ? false : { opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1.0 }}
-        className="relative w-full aspect-[16/8] md:aspect-[16/6] overflow-hidden bg-[#0A0B0D]"
-      >
-        <img
-          src={img('background.webp')}
-          alt="Aerial view of an open-pit mining and quarry operation"
-          className="absolute inset-0 w-full h-full object-cover"
-          style={{ filter: 'grayscale(35%) contrast(1.05)' }}
-          fetchPriority="high"
-          width={1920}
-          height={720}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0A0B0D]/60 via-transparent to-transparent" />
-      </motion.div>
     </section>
   )
 }
@@ -122,19 +104,18 @@ function Integration() {
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
           <div className="lg:col-span-5">
             <FadeUp>
-              <SectionLabel number="01" label="Integration" />
               <h2
                 className="font-display font-semibold text-[#16171A] leading-[1.1]"
                 style={{ fontSize: 'clamp(1.75rem, 3.2vw, 3rem)' }}
               >
-                To Be Confirmed
+                About Us
               </h2>
             </FadeUp>
           </div>
           <div className="lg:col-span-7 lg:pt-2">
             <FadeUp delay={0.08}>
               <p className="text-[#4B4F54] leading-[1.85] font-light" style={{ fontSize: '1.0625rem' }}>
-                To be confirmed.
+                We invest where long-term value is built in the ground, in the grid, and in the home. Dumas Group&rsquo;s portfolio spans mineral exploration, energy generation, and housing development. Sectors that form the backbone of developing economies and share a common thread of essential, long-cycle infrastructure investment.
               </p>
             </FadeUp>
           </div>
@@ -169,6 +150,30 @@ function Integration() {
               </div>
             ))}
           </div>
+        </FadeUp>
+
+        <FadeUp delay={0.22} className="mt-16 md:mt-20">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: '-60px' }}
+            variants={stagger}
+            className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-10"
+          >
+            {team.map((t, i) => (
+              <motion.div key={i} variants={fadeUpItem} className="text-center">
+                <div className="aspect-square w-full bg-[#EFEFEA] border border-[#E2E3E1] flex items-center justify-center mb-4">
+                  <User className="w-8 h-8 text-[#B7BBBF]" strokeWidth={1.25} />
+                </div>
+                <p className="font-mono text-[12px] font-semibold tracking-[0.1em] uppercase text-[#16171A]">
+                  {t.name}
+                </p>
+                <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#8A8F94] mt-1">
+                  {t.title}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
         </FadeUp>
       </div>
     </section>
@@ -247,64 +252,75 @@ function Timeline() {
 // =====================================================================
 // CASE STUDIES
 // =====================================================================
+const VISIBLE_CARDS = 3
+
 function Projects() {
+  const scrollRef = useRef(null)
+  const cardRefs = useRef([])
+  const [active, setActive] = useState(0)
+  const pageCount = Math.max(1, caseStudies.length - VISIBLE_CARDS + 1)
+
+  const scrollToIndex = (i) => {
+    const el = scrollRef.current
+    const card = cardRefs.current[i]
+    if (!el || !card) return
+    const target = card.getBoundingClientRect().left - el.getBoundingClientRect().left + el.scrollLeft
+    el.scrollTo({ left: target, behavior: 'smooth' })
+  }
+
+  useEffect(() => {
+    const el = scrollRef.current
+    if (!el) return
+    const onScroll = () => {
+      let closest = 0
+      let closestDist = Infinity
+      cardRefs.current.forEach((card, i) => {
+        if (!card) return
+        const dist = Math.abs(card.getBoundingClientRect().left - el.getBoundingClientRect().left)
+        if (dist < closestDist) {
+          closestDist = dist
+          closest = i
+        }
+      })
+      setActive(Math.min(closest, pageCount - 1))
+    }
+    el.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
+    return () => el.removeEventListener('scroll', onScroll)
+  }, [pageCount])
+
   return (
     <section id="projects" className="relative bg-[#F2F2EF] py-24 md:py-32 border-t border-[#E2E3E1] scroll-mt-16">
       <div className="max-w-[1180px] mx-auto px-6 md:px-10">
         <FadeUp className="mb-14 md:mb-16">
-          <SectionLabel number="04" label="Case Studies" />
           <h2 className="font-display font-semibold text-[#16171A] leading-[1.1]" style={{ fontSize: 'clamp(1.75rem, 3.2vw, 3rem)' }}>
-            Our experience over the years
+            Investment over the years
           </h2>
         </FadeUp>
-        <div className="grid md:grid-cols-2 gap-6 max-w-3xl">
-          {caseStudies.map((cs, i) => <CaseStudyCard key={i} cs={cs} delay={i * 0.08} />)}
+        <div
+          ref={scrollRef}
+          className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-4 -mx-6 px-6 md:mx-0 md:px-0 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        >
+          {caseStudies.map((cs, i) => (
+            <div key={i} ref={(node) => (cardRefs.current[i] = node)} className="snap-start shrink-0 w-[85%] sm:w-[360px]">
+              <CaseStudyCard cs={cs} delay={i * 0.08} />
+            </div>
+          ))}
         </div>
-      </div>
-    </section>
-  )
-}
 
-// =====================================================================
-// CAPITAL / RENEWABLES + PROPERTY
-// =====================================================================
-function Capital() {
-  return (
-    <section className="relative bg-[#141517] py-24 md:py-32">
-      <div className="max-w-[1180px] mx-auto px-6 md:px-10">
-        <FadeUp className="mb-14 md:mb-16 max-w-2xl">
-          <SectionLabel number="06" label="Where Capital Is Going" dark />
-          <h2 className="font-display font-semibold text-white leading-[1.1] mb-5" style={{ fontSize: 'clamp(1.75rem, 3.2vw, 3rem)' }}>
-            Capability, not forecasts
-          </h2>
-          <p className="text-[#B7BBBF] leading-[1.8] font-light" style={{ fontSize: '1.0625rem' }}>
-            AET Group, Boffin and our EPC capability address two real shortfalls: power across the SADC region, and housing in South Africa.
-          </p>
-        </FadeUp>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          <FadeUp delay={0.06} className="bg-[#1A1B1E] border border-white/10">
-            <div className="aspect-[16/10] overflow-hidden">
-              <img src={img('solar-farm-aerial.jpg')} alt="Solar array, aerial view" className="w-full h-full object-cover" loading="lazy" style={{ filter: 'grayscale(20%)' }} width={800} height={500} />
-            </div>
-            <div className="p-7">
-              <h3 className="font-display font-semibold text-white text-lg mb-2">AET Group</h3>
-              <p className="text-[#B7BBBF] leading-[1.75] font-light text-[14px]">
-                Renewable and off-grid power development, including EPC capability, addressing the regional power shortfall across SAPP.
-              </p>
-            </div>
-          </FadeUp>
-          <FadeUp delay={0.12} className="bg-[#1A1B1E] border border-white/10">
-            <div className="aspect-[16/10] overflow-hidden">
-              <img src={img('boffin-property.png')} alt="Multi-unit residential development" className="w-full h-full object-cover" loading="lazy" style={{ filter: 'grayscale(20%)' }} width={800} height={500} />
-            </div>
-            <div className="p-7">
-              <h3 className="font-display font-semibold text-white text-lg mb-2">Boffin</h3>
-              <p className="text-[#B7BBBF] leading-[1.75] font-light text-[14px]">
-                Property development, addressing the South African housing shortfall.
-              </p>
-            </div>
-          </FadeUp>
+        <div className="flex items-center justify-center gap-2.5 mt-10">
+          {Array.from({ length: pageCount }).map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              onClick={() => scrollToIndex(i)}
+              aria-label={`Go to slide ${i + 1}`}
+              aria-current={active === i}
+              className={`h-2.5 rounded-full transition-all duration-300 min-h-[44px] min-w-[16px] flex items-center justify-center`}
+            >
+              <span className={`block rounded-full transition-all duration-300 ${active === i ? 'w-6 h-2.5 bg-[#16171A]' : 'w-2.5 h-2.5 bg-[#C7CBCF] hover:bg-[#8A8F94]'}`} />
+            </button>
+          ))}
         </div>
       </div>
     </section>
@@ -322,9 +338,9 @@ function FAQ() {
     <section id="faq" className="relative bg-[#FAFAF8] py-24 md:py-32 border-t border-[#E2E3E1] scroll-mt-16">
       <div className="max-w-[1180px] mx-auto px-6 md:px-10">
         <FadeUp className="mb-14">
-          <SectionLabel number="07" label="What Buyers Ask Us" />
+          <SectionLabel number="06" label="What Buyers Ask Us" />
           <h2 className="font-display font-semibold text-[#16171A] leading-[1.1]" style={{ fontSize: 'clamp(1.75rem, 3.2vw, 3rem)' }}>
-            Common Questions - To be confirmed
+            Common Questions
           </h2>
         </FadeUp>
 
@@ -387,9 +403,8 @@ export default function Home() {
       <Timeline />
       <Projects />
       <GroupStructureSection />
-      <Capital />
       <FAQ />
-      <CapabilityPackCTA number="08" />
+      <CapabilityPackCTA number="07" />
     </>
   )
 }

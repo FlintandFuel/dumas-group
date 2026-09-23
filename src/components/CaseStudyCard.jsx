@@ -4,6 +4,11 @@ export default function CaseStudyCard({ cs, delay }) {
   if (cs.placeholder) {
     return (
       <FadeUp delay={delay} className="bg-white border border-[#E2E3E1] p-8 md:p-9 flex flex-col h-full">
+        {cs.sector && (
+          <span className="inline-block self-start font-mono text-[10px] font-semibold tracking-[0.18em] uppercase text-white bg-[#16171A] px-2.5 py-1 mb-3">
+            {cs.sector}
+          </span>
+        )}
         <h3 className="font-display font-semibold text-[#16171A] text-lg mb-4 leading-snug">{cs.title}</h3>
         <p className="text-[#4B4F54] leading-[1.7] font-light text-[14px] italic flex-1">{cs.body}</p>
       </FadeUp>

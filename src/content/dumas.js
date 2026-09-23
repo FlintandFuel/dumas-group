@@ -18,6 +18,15 @@ export const proofFigures = [
   { value: '2008', label: 'Group established' },
 ]
 
+export const team = [
+  { name: 'Name Surname', title: 'Title' },
+  { name: 'Name Surname', title: 'Title' },
+  { name: 'Name Surname', title: 'Title' },
+  { name: 'Name Surname', title: 'Title' },
+  { name: 'Name Surname', title: 'Title' },
+  { name: 'Name Surname', title: 'Title' },
+]
+
 export const valueChain = [
   { stage: 'Mining' },
   { stage: 'Engineering' },
@@ -102,6 +111,24 @@ export const caseStudies = [
     outcome: 'Project in active development.',
     pending: 'Installed or planned capacity (MW/MWh), technology mix and project stage pending confirmation.',
   },
+  {
+    placeholder: true,
+    title: 'Nyezi Steel',
+    sector: 'Industrial',
+    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+  },
+  {
+    placeholder: true,
+    title: 'Boffin',
+    sector: 'Property',
+    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+  },
+  {
+    placeholder: true,
+    title: 'DVP Hub',
+    sector: 'Technology',
+    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+  },
 ]
 
 // Company data (Nyezi Mining, AET Group, Boffin etc.) lives in content/companies.js —
@@ -109,27 +136,27 @@ export const caseStudies = [
 
 export const faqs = [
   {
-    q: 'What companies and sectors sit under the Dumas Group holding structure?',
-    a: 'To be confirmed.',
+    q: 'What is a diversified holdings company and how does it operate?',
+    a: 'A diversified holdings company owns and funds a group of separate operating businesses across different industries, rather than running a single business itself. Dumas Group works this way: we hold and capitalise each subsidiary, from mining to energy to property, and each one operates under its own management while drawing on the group’s balance sheet, relationships and shared capability. The advantage is resilience. Cash generated in one sector can fund growth in another, so the group isn’t dependent on a single market or commodity cycle.',
   },
   {
-    q: 'Who owns and controls the group?',
-    a: 'To be confirmed.',
+    q: 'What industries does Dumas Group invest in?',
+    a: 'We invest across five sectors: mining, through mineral exploration and extraction under Nyezi Mining Holdings; industrial manufacturing, through steel under Nyezi Steel and electrical and control systems under Apexion; energy, through renewable and off-grid power development under AET Group; property, through development and construction under Boffin; and technology, through ICT infrastructure management under DVP Hub. Each sector was chosen because it forms part of the essential, long-cycle infrastructure that developing economies are built on.',
   },
   {
-    q: 'Is Dumas Group open to investment, partnership or acquisition?',
-    a: 'To be confirmed.',
+    q: 'How does Dumas Group select mineral exploration projects?',
+    a: 'We prioritise mineral rights with a clear route to market, whether that is an established offtake relationship, existing rail or road access to port, or proximity to domestic power utilities that already buy what we produce. Our current mining rights, held under Nyezi Mining Holdings, span Mpumalanga, the Northern Cape, North West, Free State and Gauteng, giving us a spread of commodities including coal, chrome and limestone rather than a single-asset exposure.',
   },
   {
-    q: 'How is the group governed, and how are subsidiaries audited?',
-    a: 'To be confirmed.',
+    q: 'What renewable or energy projects does Dumas Group currently hold?',
+    a: 'AET Group is our renewable energy and off-grid power developer, and it is currently developing an off-grid power project in Namibia aimed at the regional power shortfall across the Southern African Power Pool. AET also carries EPC capability in-house, so it can take a project from development through to construction rather than handing it off to a third party.',
   },
   {
-    q: 'What is the group’s financial and operating track record?',
-    a: 'To be confirmed.',
+    q: 'How is Dumas Group involved in housing and property development?',
+    a: 'Our property arm, Boffin, handles residential development end to end, from site selection and financial planning through to project management and execution. It was set up specifically to address South Africa’s housing shortfall, applying the same long-term, infrastructure-first approach we take in mining and energy to the built environment.',
   },
   {
-    q: 'Who do we speak to, and what happens next?',
-    a: 'To be confirmed.',
+    q: 'Where does Dumas Group operate?',
+    a: 'Dumas Group is headquartered in Sandton, Johannesburg. Our mining rights and operations sit in Mpumalanga, the Northern Cape, North West, Free State and Gauteng, and our energy development work extends into Namibia and the broader SADC region. On the export side, our commodities reach 12 or more markets, primarily across Asia with a smaller share going to Europe.',
   },
 ]
