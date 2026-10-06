@@ -1,6 +1,9 @@
 import { useEffect } from 'react'
 import { motion, useReducedMotion } from 'framer-motion'
 
+// Flip to true once the capability pack document is final. Hides every CTA, link and the section itself.
+export const SHOW_CAPABILITY_PACK = false
+
 export const img = (filename) => `${import.meta.env.BASE_URL}images/${filename}`
 
 export function FadeUp({ children, delay = 0, className = '', ...rest }) {

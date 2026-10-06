@@ -19,12 +19,67 @@ export const proofFigures = [
 ]
 
 export const team = [
-  { name: 'Name Surname', title: 'Title' },
-  { name: 'Name Surname', title: 'Title' },
-  { name: 'Name Surname', title: 'Title' },
-  { name: 'Name Surname', title: 'Title' },
-  { name: 'Name Surname', title: 'Title' },
-  { name: 'Name Surname', title: 'Title' },
+  {
+    "name": "Vainon Willis",
+    "title": "Founder & Group CEO",
+    "image": "team-vainon-willis.webp",
+    "bio": [
+      "Vainon Willis is a diversified entrepreneur and investor who began his business career in 2008 across mining, construction and property development, and FMCG.",
+      "Since then, he has built and scaled multiple subsidiaries within the Dumas Group, expanding into new sectors through greenfield development, strategic investment and operational leadership.",
+      "Recognised for his strength in high-level negotiations, commercial structuring, stakeholder management and long-term business relationships, Vainon brings a global perspective with deep experience in deal-making, capital allocation and building sustainable businesses across markets.",
+      "He is actively involved in driving group strategy, partnerships and international growth."
+    ]
+  },
+  {
+    "name": "Mpumi Nzimande",
+    "title": "Group Chief Financial Officer",
+    "image": "team-mpumi-nzimande.webp",
+    "bio": [
+      "Mpumi is Group Chief Financial Officer with over a decade of experience in finance, accounting and taxation.",
+      "Her areas of expertise include tax advisory, financial management, business rescue, corporate governance, risk and compliance, complemented by broad exposure to the mining, engineering, construction and logistics sectors.",
+      "She brings a strategic and analytical approach to financial leadership, combining strong governance with financial insight to support sound decision making and sustainable growth across the Group’s diverse portfolio of businesses."
+    ]
+  },
+  {
+    "name": "Renier von Zeuner",
+    "title": "Group Chief Operating Officer",
+    "image": "team-renier-von-zeuner.webp",
+    "bio": [
+      "Renier oversees group strategy and operations across the energy, property, and ICT portfolios. He holds degrees in Political Sciences and International Relations, which gives him a strong grounding in the policy, regulatory and stakeholder environments the group works in.",
+      "His background in the Communications and Integrated Services sectors underpins his approach to aligning diverse teams and partners around shared goals.",
+      "Day to day, he focuses on business development and operational management, helping turn the group’s strategy into delivery."
+    ]
+  },
+  {
+    "name": "Andrea Nunes",
+    "title": "Executive Assistant and Office Manager",
+    "image": "team-andrea-nunes.webp",
+    "bio": [
+      "Andrea brings over 20 years of professional experience to our team, including more than a decade as an Executive Assistant and Office Manager.",
+      "She provides high-level executive support, managing competing priorities, coordinating schedules and overseeing office operations with discretion and efficiency.",
+      "Known for her organisational skill and composure under pressure, Andrea anticipates needs, maintains strict confidentiality and pays close attention to detail. Her commitment to structure and problem-solving ensures our leadership can stay focused on what matters most."
+    ]
+  },
+  {
+    "name": "Kaitlin Mani",
+    "title": "Group Financial Manager",
+    "image": "team-kaitlin-mani.webp",
+    "bio": [
+      "Kaitlin is the Group’s Financial Manager. She holds qualifications in Accounting and Commerce and brings a strong background in management accounting, financial reporting and compliance.",
+      "Her role encompasses financial oversight, cash flow forecasting, budgeting, tax and regulatory compliance, and overseeing accounting functions. She brings experience across fashion, property and manufacturing industries, with a focus on accuracy, efficiency and supporting business growth.",
+      "Kaitlin brings international experience through her work in Australia and South Africa."
+    ]
+  },
+  {
+    "name": "Sevy Maphosa",
+    "title": "Office Support and Hospitality Manager",
+    "image": "team-sevy-maphosa.webp",
+    "bio": [
+      "Sevy is a dedicated Office Support Professional with over 20 years of experience.",
+      "She plays a key role in our day-to-day operations, providing additional administrative support, overseeing office facilities and ensuring a well-run, professional environment for our team and visitors. Known for her warm, positive approach, Sevy combines reliability with strong attention to detail.",
+      "Whether assisting with administrative tasks, ensuring the office is organised, or simply bringing a friendly presence to the workplace, she is a valued team member who can always be counted on to keep things running seamlessly."
+    ]
+  }
 ]
 
 export const valueChain = [
@@ -99,7 +154,6 @@ export const caseStudies = [
     context: 'Development of a metallurgical and industrial-grade limestone asset in the Northern Cape, supplying flue-gas desulphurisation and industrial buyers.',
     owned: 'Mining rights and extraction, with grade and purity specification under Nyezi Mining Holdings.',
     outcome: 'Established supply relationship with domestic power utility offtake.',
-    pending: 'CaCO₃ purity, grade and receiving application pending confirmation.',
   },
   {
     title: 'AET off-grid power, Namibia',
@@ -109,54 +163,64 @@ export const caseStudies = [
     context: 'An off-grid power project addressing the regional power shortfall, developed under AET Group’s renewable energy and EPC capability.',
     owned: 'Project development and technical capability under AET Group.',
     outcome: 'Project in active development.',
-    pending: 'Installed or planned capacity (MW/MWh), technology mix and project stage pending confirmation.',
   },
   {
-    placeholder: true,
-    title: 'Nyezi Steel',
-    sector: 'Industrial',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+    "title": "Nyezi Steel",
+    "sector": "Industrial",
+    "context": "A turnkey steel solutions company founded in 2021, managing the full supply and value chain from RFQ to international delivery. Nyezi Steel gives buyers a single point of accountability across the process. The company concluded its first SADC-focused business in 2026 and is building toward a larger role in the steel export market.",
+    "owned": "A majority shareholding in Nyezi Steel, covering procurement, logistics and export execution. Group executives are closely involved, providing hands-on support across operations and finance.",
+    "outcome": "First SADC-focused business concluded in 2026, with the platform being positioned for growth in steel export markets."
   },
   {
-    placeholder: true,
-    title: 'Boffin',
-    sector: 'Property',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+    "title": "Boffin",
+    "sector": "Property",
+    "context": "The group’s property investment subsidiary, focused on affordable housing and mixed-use assets. Alongside its commercial holdings in Sandton, Boffin is addressing the shortfall in student housing by recapitalising existing residential properties, bringing underused stock back into productive use rather than building from the ground up.",
+    "owned": "A 100% shareholding in Boffin, which owns and manages commercial properties in Gauteng. Dumas Group executives play a direct role in the daily activities of the business, from asset operations through to operational funding.",
+    "outcome": "Commercial portfolio under active management, with a student housing pipeline in development and retail. Boffin most recently designed Boffin Suites, a shared premium office space at Embassy Towers in Sandton, in 2026."
   },
   {
-    placeholder: true,
-    title: 'DVP Hub',
-    sector: 'Technology',
-    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.',
+    "title": "DVP Hub",
+    "sector": "Technology",
+    "context": "Previously known as Dhlamsville Projects, DVP Hub was strategically rebranded by Dumas Group to align with the ICT sector, delivering cybersecurity and infrastructure-based ICT solutions to the South African market. DVP Hub works where digital infrastructure meets operational risk, building platforms that keep critical networks connected and businesses running. Its work spans national infrastructure and the public and private sectors.",
+    "owned": "An equity stake in DVP Hub, supporting its development and capital. The group contributes executive involvement in operations and financial management, with strategy solutions and execution.",
+    "outcome": "Two key projects in development: RailHub, a rail infrastructure management platform unifying communications across the SADC rail network, and CyberStack, a purpose-built cybersecurity offering focused on business continuity and protection against cyber attack."
   },
 ]
 
-// Company data (Nyezi Mining, AET Group, Boffin etc.) lives in content/companies.js —
+// Company data (Nyezi Mining Holdings, AET Group, Boffin etc.) lives in content/companies.js —
 // it is the single source for the homepage teaser, the /our-companies page and the organogram.
 
 export const faqs = [
   {
-    q: 'What is a diversified holdings company and how does it operate?',
-    a: 'A diversified holdings company owns and funds a group of separate operating businesses across different industries, rather than running a single business itself. Dumas Group works this way: we hold and capitalise each subsidiary, from mining to energy to property, and each one operates under its own management while drawing on the group’s balance sheet, relationships and shared capability. The advantage is resilience. Cash generated in one sector can fund growth in another, so the group isn’t dependent on a single market or commodity cycle.',
+    "q": "What is a diversified holdings company and how does it operate?",
+    "a": "Dumas Group is a diversified holdings company that owns and develops businesses across mineral exploration, energy, and housing. Rather than operating as a single business, we structure each venture as its own entity under the group, allowing us to allocate capital strategically across sectors while sharing relationships, governance and operational expertise group wide."
   },
   {
-    q: 'What industries does Dumas Group invest in?',
-    a: 'We invest across five sectors: mining, through mineral exploration and extraction under Nyezi Mining Holdings; industrial manufacturing, through steel under Nyezi Steel and electrical and control systems under Apexion; energy, through renewable and off-grid power development under AET Group; property, through development and construction under Boffin; and technology, through ICT infrastructure management under DVP Hub. Each sector was chosen because it forms part of the essential, long-cycle infrastructure that developing economies are built on.',
+    "q": "What industries does Dumas Group invest in?",
+    "a": "Dumas Group invests across mineral exploration, energy (with a focus on solar-plus-BESS, and growing interest in hydro and wind), housing development (spanning student accommodation, affordable and gap-market housing, and first-home-buyer segments) and ICT and cybersecurity, a growing focus area for the group. Each vertical is backed by dedicated operating subsidiaries and long-term capital."
   },
   {
-    q: 'How does Dumas Group select mineral exploration projects?',
-    a: 'We prioritise mineral rights with a clear route to market, whether that is an established offtake relationship, existing rail or road access to port, or proximity to domestic power utilities that already buy what we produce. Our current mining rights, held under Nyezi Mining Holdings, span Mpumalanga, the Northern Cape, North West, Free State and Gauteng, giving us a spread of commodities including coal, chrome and limestone rather than a single-asset exposure.',
+    "q": "How does Dumas Group select mineral exploration projects?",
+    "a": "Dumas Group defers to the executive team of Nyezi Mining Holdings to evaluate mineral exploration opportunities, based on resource quality and potential, with a focus on projects that support the group’s broader growth strategy."
   },
   {
-    q: 'What renewable or energy projects does Dumas Group currently hold?',
-    a: 'AET Group is our renewable energy and off-grid power developer, and it is currently developing an off-grid power project in Namibia aimed at the regional power shortfall across the Southern African Power Pool. AET also carries EPC capability in-house, so it can take a project from development through to construction rather than handing it off to a third party.',
+    "q": "What renewable energy projects does Dumas Group currently hold?",
+    "a": "Dumas Group’s primary energy focus is PV + BESS (battery energy storage system) independent power production, with growing interest in hydro and wind generation. Our platform spans project sizing, permitting, structuring, and financing across target markets."
   },
   {
-    q: 'How is Dumas Group involved in housing and property development?',
-    a: 'Our property arm, Boffin, handles residential development end to end, from site selection and financial planning through to project management and execution. It was set up specifically to address South Africa’s housing shortfall, applying the same long-term, infrastructure-first approach we take in mining and energy to the built environment.',
+    "q": "How is Dumas Group involved in housing and property development?",
+    "a": "Dumas Group develops housing across multiple segments: student accommodation, affordable housing, gap-market housing, and first-home-buyer properties, aimed at addressing housing shortages across our target markets. Our approach combines development expertise with structured utility and funding partnerships to deliver at scale."
   },
   {
-    q: 'Where does Dumas Group operate?',
-    a: 'Dumas Group is headquartered in Sandton, Johannesburg. Our mining rights and operations sit in Mpumalanga, the Northern Cape, North West, Free State and Gauteng, and our energy development work extends into Namibia and the broader SADC region. On the export side, our commodities reach 12 or more markets, primarily across Asia with a smaller share going to Europe.',
+    "q": "What makes Dumas Group different from other investment holding groups?",
+    "a": "Dumas Group takes a long-term, infrastructure-first approach, building operating businesses in sectors (resources, power, and shelter) that form the backbone of developing economies. Our cross-sector structure lets us leverage shared capital, institutional relationships, and operational expertise across every vertical we hold."
   },
+  {
+    "q": "How can I partner or invest with Dumas Group?",
+    "a": "The best way to learn more about partnering or investing with Dumas Group is to get in touch with our team, who can share detailed information on our portfolio, current opportunities, and investment approach."
+  },
+  {
+    "q": "Where does Dumas Group operate?",
+    "a": "Dumas Group is based in South Africa, with a strategic focus on the SADC region, while our interests and capabilities extend to a global reach."
+  }
 ]

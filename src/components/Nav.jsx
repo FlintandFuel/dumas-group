@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
-import { img } from '../lib/shared'
+import { img, SHOW_CAPABILITY_PACK } from '../lib/shared'
 
 const links = [
   { label: 'Home', to: '/' },
@@ -50,12 +50,14 @@ export default function Nav({ topOffset = 0, alwaysSolid = false }) {
                 {l.label}
               </Link>
             ))}
-            <Link
-              to="/capability-pack"
-              className="ml-1 font-mono text-[11px] font-semibold tracking-[0.2em] uppercase px-5 py-2.5 border border-white/70 text-white hover:bg-white hover:text-[#0A0B0D] transition-all duration-200 min-h-[44px] inline-flex items-center"
-            >
-              Request Capability Pack
-            </Link>
+            {SHOW_CAPABILITY_PACK && (
+<Link
+                to="/capability-pack"
+                className="ml-1 font-mono text-[11px] font-semibold tracking-[0.2em] uppercase px-5 py-2.5 border border-white/70 text-white hover:bg-white hover:text-[#0A0B0D] transition-all duration-200 min-h-[44px] inline-flex items-center"
+              >
+                Request Capability Pack
+              </Link>
+            )}
           </div>
 
           <button
@@ -109,6 +111,7 @@ export default function Nav({ topOffset = 0, alwaysSolid = false }) {
                 </motion.div>
               ))}
             </nav>
+            {SHOW_CAPABILITY_PACK && (
             <div className="mt-auto pt-10">
               <Link
                 to="/capability-pack"
@@ -118,6 +121,7 @@ export default function Nav({ topOffset = 0, alwaysSolid = false }) {
                 Request Capability Pack
               </Link>
             </div>
+            )}
           </motion.div>
         )}
       </AnimatePresence>

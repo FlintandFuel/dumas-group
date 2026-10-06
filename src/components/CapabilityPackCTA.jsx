@@ -1,10 +1,12 @@
 import { useState } from 'react'
-import { FadeUp, SectionLabel } from '../lib/shared'
+import { FadeUp, SectionLabel, SHOW_CAPABILITY_PACK } from '../lib/shared'
 
 export default function CapabilityPackCTA({ number = '—' }) {
   const [form, setForm] = useState({ name: '', company: '', email: '', country: '', interest: 'Coal' })
   const [submitted, setSubmitted] = useState(false)
   const [errors, setErrors] = useState({})
+
+  if (!SHOW_CAPABILITY_PACK) return null
 
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }))
 

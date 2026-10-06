@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { motion, useReducedMotion, AnimatePresence } from 'framer-motion'
 import { User } from 'lucide-react'
-import { FadeUp, SectionLabel, stagger, fadeUpItem, img, usePageMeta } from '../lib/shared'
+import { FadeUp, SectionLabel, stagger, fadeUpItem, img, usePageMeta, SHOW_CAPABILITY_PACK } from '../lib/shared'
 import { proofFigures, valueChain, timeline, caseStudies, faqs, team } from '../content/dumas'
 import { companies } from '../content/companies'
 import CaseStudyCard from '../components/CaseStudyCard'
@@ -53,12 +53,14 @@ function Hero() {
             transition={{ duration: 0.6, delay: 0.85 }}
             className="flex flex-wrap gap-5 items-center justify-center"
           >
-            <a
-              href="#capability-pack"
-              className="inline-flex items-center min-h-[44px] font-mono text-[11px] font-semibold tracking-[0.2em] uppercase px-7 py-3 bg-white text-[#0A0B0D] hover:bg-[#C7CBCF] transition-all duration-200"
-            >
-              Request the Capability Pack
-            </a>
+            {SHOW_CAPABILITY_PACK && (
+<a
+                href="#capability-pack"
+                className="inline-flex items-center min-h-[44px] font-mono text-[11px] font-semibold tracking-[0.2em] uppercase px-7 py-3 bg-white text-[#0A0B0D] hover:bg-[#C7CBCF] transition-all duration-200"
+              >
+                Request the Capability Pack
+              </a>
+            )}
           </motion.div>
         </div>
       </div>
@@ -158,19 +160,28 @@ function Integration() {
             whileInView="visible"
             viewport={{ once: true, margin: '-60px' }}
             variants={stagger}
-            className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-10"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-14"
           >
             {team.map((t, i) => (
-              <motion.div key={i} variants={fadeUpItem} className="text-center">
-                <div className="aspect-square w-full bg-[#EFEFEA] border border-[#E2E3E1] flex items-center justify-center mb-4">
-                  <User className="w-8 h-8 text-[#B7BBBF]" strokeWidth={1.25} />
+              <motion.div key={i} variants={fadeUpItem}>
+                <div className="aspect-square w-full max-w-[240px] md:max-w-none bg-[#EFEFEA] border border-[#E2E3E1] flex items-center justify-center mb-5 overflow-hidden">
+                  {t.image ? (
+                    <img src={img(t.image)} alt={`${t.name}, ${t.title}`} loading="lazy" className="w-full h-full object-cover" />
+                  ) : (
+                    <User className="w-8 h-8 text-[#B7BBBF]" strokeWidth={1.25} />
+                  )}
                 </div>
-                <p className="font-mono text-[12px] font-semibold tracking-[0.1em] uppercase text-[#16171A]">
+                <p className="font-mono text-[13px] font-semibold tracking-[0.1em] uppercase text-[#16171A]">
                   {t.name}
                 </p>
-                <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#8A8F94] mt-1">
+                <p className="font-mono text-[11px] tracking-[0.14em] uppercase text-[#6B7075] mt-1 mb-4">
                   {t.title}
                 </p>
+                <div className="space-y-3">
+                  {t.bio.map((p, j) => (
+                    <p key={j} className="text-[#4B4F54] leading-[1.7] font-light text-[15px]">{p}</p>
+                  ))}
+                </div>
               </motion.div>
             ))}
           </motion.div>
@@ -184,7 +195,7 @@ function Integration() {
 // TIMELINE
 // =====================================================================
 const TIMELINE_LINKS = [
-  { pattern: 'Nyezi Mining', slug: 'nyezi-mining-holdings' },
+  { pattern: 'Nyezi Mining Holdings', slug: 'nyezi-mining-holdings' },
   { pattern: 'Nyezi Steel', slug: 'nyezi-steel' },
   { pattern: 'AET Group', slug: 'aet-group' },
   { pattern: 'DVP Hub', slug: 'dvp-hub' },

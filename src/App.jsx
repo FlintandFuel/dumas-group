@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Routes, Route, useLocation } from 'react-router-dom'
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
 import Home from './pages/Home'
@@ -9,7 +9,7 @@ import CommoditiesPage from './pages/CommoditiesPage'
 import ProjectsPage from './pages/ProjectsPage'
 import ContactPage from './pages/ContactPage'
 import CapabilityPackPage from './pages/CapabilityPackPage'
-import { SPECIMEN_BANNER_HEIGHT } from './components/SpecimenBanner'
+import { SHOW_CAPABILITY_PACK } from './lib/shared'
 import './index.css'
 
 // Scrolls to a #hash target on navigation (client-side routing doesn't do this for you),
@@ -34,13 +34,12 @@ function ScrollManager() {
 
 export default function App() {
   const location = useLocation()
-  const isCSI = location.pathname === '/corporate-social-investment'
   const isHome = location.pathname === '/'
 
   return (
     <div className="font-sans bg-[#FAFAF8] text-[#16171A] antialiased">
       <ScrollManager />
-      <Nav topOffset={isCSI ? SPECIMEN_BANNER_HEIGHT : 0} alwaysSolid={!isHome} />
+      <Nav alwaysSolid={!isHome} />
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -49,7 +48,7 @@ export default function App() {
           <Route path="/commodities" element={<CommoditiesPage />} />
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/capability-pack" element={<CapabilityPackPage />} />
+          <Route path="/capability-pack" element={SHOW_CAPABILITY_PACK ? <CapabilityPackPage /> : <Navigate to="/contact" replace />} />
         </Routes>
       </main>
       <Footer />

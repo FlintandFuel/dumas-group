@@ -1,4 +1,4 @@
-import { FadeUp, img } from '../lib/shared'
+import { FadeUp, img, SHOW_CAPABILITY_PACK } from '../lib/shared'
 
 // Full detail card with an inline specification table — used on the dedicated
 // /commodities page. The homepage uses the lighter CommodityTeaserCard instead.
@@ -44,10 +44,12 @@ export default function CommodityCard({ c, image, delay }) {
           </p>
         )}
 
-        <a href="#capability-pack" className="mt-auto font-mono text-[11px] font-semibold tracking-[0.18em] uppercase text-[#16171A] hover:text-[#71767C] transition-colors inline-flex items-center gap-2">
-          Request full specification
-          <span className="w-4 h-px bg-current" />
-        </a>
+        {SHOW_CAPABILITY_PACK && (
+          <a href="#capability-pack" className="mt-auto font-mono text-[11px] font-semibold tracking-[0.18em] uppercase text-[#16171A] hover:text-[#71767C] transition-colors inline-flex items-center gap-2">
+            Request full specification
+            <span className="w-4 h-px bg-current" />
+          </a>
+        )}
       </div>
     </FadeUp>
   )
