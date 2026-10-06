@@ -1,79 +1,10 @@
-import { useState } from 'react'
 import { FadeUp, SectionLabel, usePageMeta } from '../lib/shared'
 import { contact } from '../content/dumas'
+import HubSpotForm from '../components/HubSpotForm'
 import CapabilityPackCTA from '../components/CapabilityPackCTA'
 
 const mapQuery = encodeURIComponent(contact.addressLines.join(', '))
 const mapSrc = `https://www.google.com/maps?q=${mapQuery}&output=embed`
-
-function ContactForm() {
-  const [form, setForm] = useState({ name: '', email: '', message: '' })
-  const [submitted, setSubmitted] = useState(false)
-  const [errors, setErrors] = useState({})
-
-  const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }))
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const nextErrors = {}
-    if (!form.name.trim()) nextErrors.name = 'Required'
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) nextErrors.email = 'Enter a valid email'
-    if (!form.message.trim()) nextErrors.message = 'Required'
-    setErrors(nextErrors)
-    if (Object.keys(nextErrors).length === 0) {
-      console.log('Contact enquiry', form)
-      setSubmitted(true)
-    }
-  }
-
-  const inputClass = (key) =>
-    `w-full bg-transparent border ${errors[key] ? 'border-red-500' : 'border-[#D3D4D1]'} px-4 py-3 text-[#16171A] text-sm placeholder:text-[#8A8F94] focus:outline-none focus:border-[#16171A] transition-colors duration-200 min-h-[44px] font-light`
-
-  const labelClass = 'block text-[11px] font-mono font-medium tracking-[0.2em] uppercase text-[#8A8F94] mb-2'
-
-  if (submitted) {
-    return (
-      <div className="border border-[#D3D4D1] p-10 text-center">
-        <div className="w-8 h-px bg-[#16171A] mx-auto mb-6" />
-        <p className="font-semibold text-[#16171A] text-lg mb-3">Thank you.</p>
-        <p className="text-[#4B4F54] text-sm leading-relaxed max-w-xs mx-auto font-light">
-          Your message has been received. We will be in touch shortly.
-        </p>
-      </div>
-    )
-  }
-
-  return (
-    <form onSubmit={handleSubmit} className="space-y-6" noValidate>
-      <div>
-        <label htmlFor="name" className={labelClass}>Name</label>
-        <input id="name" type="text" value={form.name} onChange={set('name')} className={inputClass('name')} placeholder="First and last name" />
-        {errors.name && <p className="text-[11px] text-red-500 mt-1.5">{errors.name}</p>}
-      </div>
-      <div>
-        <label htmlFor="email" className={labelClass}>Email</label>
-        <input id="email" type="email" value={form.email} onChange={set('email')} className={inputClass('email')} placeholder="you@company.com" />
-        {errors.email && <p className="text-[11px] text-red-500 mt-1.5">{errors.email}</p>}
-      </div>
-      <div>
-        <label htmlFor="message" className={labelClass}>Message</label>
-        <textarea id="message" rows={5} value={form.message} onChange={set('message')} className={`${inputClass('message')} resize-none`} placeholder="How can we help?" />
-        {errors.message && <p className="text-[11px] text-red-500 mt-1.5">{errors.message}</p>}
-      </div>
-      <div className="flex flex-wrap items-center gap-6">
-        <button
-          type="submit"
-          className="inline-flex items-center min-h-[44px] font-mono text-[11px] font-semibold tracking-[0.2em] uppercase px-8 py-3 bg-[#16171A] text-white hover:bg-[#333438] transition-all duration-200"
-        >
-          Send Message
-        </button>
-        <p className="text-[11px] text-[#8A8F94] leading-relaxed">
-          Your information is used only to respond to your enquiry.
-        </p>
-      </div>
-    </form>
-  )
-}
 
 export default function ContactPage() {
   usePageMeta({
@@ -128,7 +59,7 @@ export default function ContactPage() {
 
             <div className="lg:col-span-7">
               <FadeUp delay={0.1}>
-                <ContactForm />
+                <HubSpotForm />
               </FadeUp>
             </div>
           </div>
