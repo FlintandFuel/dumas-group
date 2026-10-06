@@ -46,7 +46,7 @@ export default function CompanySection({ company, showGaps, sectionFocusRefs, de
       <div className="grid md:grid-cols-12 gap-8 md:gap-10">
         {image && (
           <div className="md:col-span-4">
-            <div className="aspect-[4/3] overflow-hidden bg-[#E7E7E4]">
+            <div className="aspect-[4/3] w-full max-w-[300px] sm:max-w-[360px] md:max-w-none overflow-hidden bg-[#E7E7E4]">
               <img src={img(image)} alt={`${name}, Dumas Group`} className="w-full h-full object-cover" loading="lazy" width={480} height={360} />
             </div>
           </div>
