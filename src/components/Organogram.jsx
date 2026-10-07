@@ -64,7 +64,6 @@ function Node({
       onBlur={() => setHover(false)}
       className={`relative focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#16171A] focus-visible:outline-offset-4 ${base}`}
       style={{
-        borderLeft: isRoot ? '3px solid #F2F3F4' : undefined,
         opacity: dimmed ? 0.75 : 1,
       }}
     >

@@ -5,7 +5,6 @@
 // Confirmed real contact details (phone/email from the live site, full address supplied
 // directly) — used on both the footer and /contact.
 export const contact = {
-  tagline: 'Dumas Group | Innovation Partner',
   phone: '010 100 3132',
   phoneHref: 'tel:0101003132',
   email: 'info@dumasgroup.co.za',
@@ -14,7 +13,6 @@ export const contact = {
 
 export const proofFigures = [
   { value: '12+', label: 'Export markets served' },
-  { value: '60+ yrs', label: 'Combined geological experience' },
   { value: '2008', label: 'Group established' },
 ]
 
@@ -24,7 +22,7 @@ export const team = [
     "title": "Founder & Group CEO",
     "image": "team-vainon-willis.webp",
     "bio": [
-      "Vainon Willis is a diversified entrepreneur and investor who began his business career in 2008 across mining, construction and property development, and FMCG.",
+      "Is a diversified entrepreneur and investor who began his business career in 2008 across mining, construction and property development, and FMCG.",
       "Since then, he has built and scaled multiple subsidiaries within the Dumas Group, expanding into new sectors through greenfield development, strategic investment and operational leadership.",
       "Recognised for his strength in high-level negotiations, commercial structuring, stakeholder management and long-term business relationships, Vainon brings a global perspective with deep experience in deal-making, capital allocation and building sustainable businesses across markets.",
       "He is actively involved in driving group strategy, partnerships and international growth."
@@ -35,7 +33,7 @@ export const team = [
     "title": "Group Chief Financial Officer",
     "image": "team-mpumi-nzimande.webp",
     "bio": [
-      "Mpumi is Group Chief Financial Officer with over a decade of experience in finance, accounting and taxation.",
+      "Is the Group Chief Financial Officer with over a decade of experience in finance, accounting and taxation.",
       "Her areas of expertise include tax advisory, financial management, business rescue, corporate governance, risk and compliance, complemented by broad exposure to the mining, engineering, construction and logistics sectors.",
       "She brings a strategic and analytical approach to financial leadership, combining strong governance with financial insight to support sound decision making and sustainable growth across the Group’s diverse portfolio of businesses."
     ]
@@ -45,7 +43,7 @@ export const team = [
     "title": "Group Chief Operating Officer",
     "image": "team-renier-von-zeuner.webp",
     "bio": [
-      "Renier oversees group strategy and operations across the energy, property, and ICT portfolios. He holds degrees in Political Sciences and International Relations, which gives him a strong grounding in the policy, regulatory and stakeholder environments the group works in.",
+      "Oversees group strategy and operations across the energy, property, and ICT portfolios. He holds degrees in Political Sciences and International Relations, which gives him a strong grounding in the policy, regulatory and stakeholder environments the group works in.",
       "His background in the Communications and Integrated Services sectors underpins his approach to aligning diverse teams and partners around shared goals.",
       "Day to day, he focuses on business development and operational management, helping turn the group’s strategy into delivery."
     ]
@@ -55,7 +53,7 @@ export const team = [
     "title": "Executive Assistant and Office Manager",
     "image": "team-andrea-nunes.webp",
     "bio": [
-      "Andrea brings over 20 years of professional experience to our team, including more than a decade as an Executive Assistant and Office Manager.",
+      "Brings over 20 years of professional experience to our team, including more than a decade as an Executive Assistant and Office Manager.",
       "She provides high-level executive support, managing competing priorities, coordinating schedules and overseeing office operations with discretion and efficiency.",
       "Known for her organisational skill and composure under pressure, Andrea anticipates needs, maintains strict confidentiality and pays close attention to detail. Her commitment to structure and problem-solving ensures our leadership can stay focused on what matters most."
     ]
@@ -65,7 +63,7 @@ export const team = [
     "title": "Group Financial Manager",
     "image": "team-kaitlin-mani.webp",
     "bio": [
-      "Kaitlin is the Group’s Financial Manager. She holds qualifications in Accounting and Commerce and brings a strong background in management accounting, financial reporting and compliance.",
+      "Is the Group’s Financial Manager. She holds qualifications in Accounting and Commerce and brings a strong background in management accounting, financial reporting and compliance.",
       "Her role encompasses financial oversight, cash flow forecasting, budgeting, tax and regulatory compliance, and overseeing accounting functions. She brings experience across fashion, property and manufacturing industries, with a focus on accuracy, efficiency and supporting business growth.",
       "Kaitlin brings international experience through her work in Australia and South Africa."
     ]
@@ -75,7 +73,7 @@ export const team = [
     "title": "Office Support and Hospitality Manager",
     "image": "team-sevy-maphosa.webp",
     "bio": [
-      "Sevy is a dedicated Office Support Professional with over 20 years of experience.",
+      "Is a dedicated Office Support Professional with over 20 years of experience.",
       "She plays a key role in our day-to-day operations, providing additional administrative support, overseeing office facilities and ensuring a well-run, professional environment for our team and visitors. Known for her warm, positive approach, Sevy combines reliability with strong attention to detail.",
       "Whether assisting with administrative tasks, ensuring the office is organised, or simply bringing a friendly presence to the workplace, she is a valued team member who can always be counted on to keep things running seamlessly."
     ]
@@ -148,6 +146,7 @@ export const timeline = [
 export const caseStudies = [
   {
     title: 'Campbell Limestone Project',
+    watermark: 'wm-nyezi-mining.webp',
     sector: 'Mining',
     objection: 'Do you understand your product beyond digging it up?',
     meta: { period: 'Ongoing', commodity: 'Limestone', place: 'Northern Cape, South Africa', role: 'Owner-operator' },
@@ -157,6 +156,7 @@ export const caseStudies = [
   },
   {
     title: 'AET off-grid power, Namibia',
+    watermark: 'wm-aet-group.webp',
     sector: 'Energy',
     objection: 'Are you a declining coal business, or a group with a next act?',
     meta: { period: 'In development', commodity: 'Renewable energy', place: 'Namibia', role: 'Developer' },
@@ -166,6 +166,7 @@ export const caseStudies = [
   },
   {
     "title": "Nyezi Steel",
+    "watermark": "wm-nyezi-steel.webp",
     "sector": "Industrial",
     "context": "A turnkey steel solutions company founded in 2021, managing the full supply and value chain from RFQ to international delivery. Nyezi Steel gives buyers a single point of accountability across the process. The company concluded its first SADC-focused business in 2026 and is building toward a larger role in the steel export market.",
     "owned": "A majority shareholding in Nyezi Steel, covering procurement, logistics and export execution. Group executives are closely involved, providing hands-on support across operations and finance.",
@@ -173,6 +174,7 @@ export const caseStudies = [
   },
   {
     "title": "Boffin",
+    "watermark": "wm-boffin-property.webp",
     "sector": "Property",
     "context": "The group’s property investment subsidiary, focused on affordable housing and mixed-use assets. Alongside its commercial holdings in Sandton, Boffin is addressing the shortfall in student housing by recapitalising existing residential properties, bringing underused stock back into productive use rather than building from the ground up.",
     "owned": "A 100% shareholding in Boffin, which owns and manages commercial properties in Gauteng. Dumas Group executives play a direct role in the daily activities of the business, from asset operations through to operational funding.",
@@ -180,6 +182,7 @@ export const caseStudies = [
   },
   {
     "title": "DVP Hub",
+    "watermark": "wm-dvp-hub.webp",
     "sector": "Technology",
     "context": "Previously known as Dhlamsville Projects, DVP Hub was strategically rebranded by Dumas Group to align with the ICT sector, delivering cybersecurity and infrastructure-based ICT solutions to the South African market. DVP Hub works where digital infrastructure meets operational risk, building platforms that keep critical networks connected and businesses running. Its work spans national infrastructure and the public and private sectors.",
     "owned": "An equity stake in DVP Hub, supporting its development and capital. The group contributes executive involvement in operations and financial management, with strategy solutions and execution.",

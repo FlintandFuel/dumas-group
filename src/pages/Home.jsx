@@ -80,7 +80,7 @@ function ProofBar() {
           whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
           variants={stagger}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-x-6 gap-y-10 max-w-2xl mx-auto"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-10 max-w-md mx-auto"
         >
           {proofFigures.map((f) => (
             <motion.div key={f.label} variants={fadeUpItem} className="text-center">

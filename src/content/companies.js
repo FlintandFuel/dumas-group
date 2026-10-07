@@ -23,10 +23,6 @@ export const companies = [
     region: null,
     parent: 'dumas-group',
     children: [],
-    project: {
-      name: 'Limestone Project',
-      body: 'To be confirmed.',
-    },
   },
   {
     slug: 'nyezi-steel',

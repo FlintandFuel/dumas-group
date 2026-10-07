@@ -29,7 +29,7 @@ export default function OrganogramCompact() {
       {/* True desktop — horizontal, no wrap */}
       <div className="hidden xl:block">
         <div className="flex justify-center mb-6">
-          <div className="px-5 py-3 text-center bg-transparent border border-[#4B4F54] whitespace-nowrap" style={{ borderLeft: '3px solid #F2F3F4' }}>
+          <div className="px-5 py-3 text-center bg-transparent border border-[#4B4F54] whitespace-nowrap">
             <span className="font-mono text-[11px] font-semibold tracking-[0.1em] uppercase text-[#F2F3F4]">Dumas Group</span>
           </div>
         </div>
@@ -46,7 +46,7 @@ export default function OrganogramCompact() {
           root), so it sits close to the line instead of floating in a wide, empty column. */}
       <div className="xl:hidden flex items-stretch justify-center gap-6">
         <div className="flex-shrink-0 flex items-start pt-1">
-          <div className="px-4 py-3 text-center bg-transparent border border-[#4B4F54] whitespace-nowrap" style={{ borderLeft: '3px solid #F2F3F4' }}>
+          <div className="px-4 py-3 text-center bg-transparent border border-[#4B4F54] whitespace-nowrap">
             <span className="font-mono text-[11px] font-semibold tracking-[0.1em] uppercase text-[#F2F3F4]">Dumas Group</span>
           </div>
         </div>

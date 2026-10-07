@@ -21,12 +21,9 @@ export default function OurCompanies() {
       <section className="relative bg-white pt-40 pb-16 md:pt-48 md:pb-20">
         <div className="max-w-[1180px] mx-auto px-6 md:px-10">
           <FadeUp className="max-w-2xl mb-10">
-            <h1 className="font-display font-semibold text-[#16171A] leading-[1.1] mb-5" style={{ fontSize: 'clamp(1.875rem, 3.6vw, 3.25rem)' }}>
-              How the group fits together
+            <h1 className="font-display font-semibold text-[#16171A] leading-[1.1]" style={{ fontSize: 'clamp(1.875rem, 3.6vw, 3.25rem)' }}>
+              Group Structure
             </h1>
-            <p className="text-[#4B4F54] leading-[1.8] font-light" style={{ fontSize: '1.0625rem' }}>
-              Dumas Group holds and funds the businesses below. Each one operates independently, and each one strengthens what the others can deliver.
-            </p>
           </FadeUp>
 
           <FadeUp delay={0.14}>

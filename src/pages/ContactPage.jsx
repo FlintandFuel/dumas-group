@@ -19,10 +19,9 @@ export default function ContactPage() {
         <div className="max-w-[1180px] mx-auto px-6 md:px-10">
           <FadeUp className="max-w-2xl mb-14">
             <SectionLabel number="—" label="Contact" />
-            <h1 className="font-display font-semibold text-[#16171A] leading-[1.1] mb-3" style={{ fontSize: 'clamp(1.875rem, 3.6vw, 3.25rem)' }}>
+            <h1 className="font-display font-semibold text-[#16171A] leading-[1.1]" style={{ fontSize: 'clamp(1.875rem, 3.6vw, 3.25rem)' }}>
               Get in touch
             </h1>
-            <p className="text-[#4B4F54] font-light" style={{ fontSize: '1.0625rem' }}>{contact.tagline}</p>
           </FadeUp>
 
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
