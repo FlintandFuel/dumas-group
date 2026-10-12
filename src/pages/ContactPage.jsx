@@ -9,7 +9,7 @@ const mapSrc = `https://www.google.com/maps?q=${mapQuery}&output=embed`
 export default function ContactPage() {
   usePageMeta({
     title: 'Contact | Dumas Group South Africa',
-    description: 'Contact Dumas Group South Africa. Sandhurst, Sandton, Gauteng.',
+    description: 'Get in touch with Dumas Group: 11 Alice Lane, Sandhurst, Sandton, Gauteng. Call 010 100 3132 or email info@dumasgroup.co.za.',
     canonical: 'https://dumasgroup.co.za/contact/',
   })
 

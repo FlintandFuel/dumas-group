@@ -5,9 +5,9 @@ import { img, SHOW_CAPABILITY_PACK } from '../lib/shared'
 
 const links = [
   { label: 'Home', to: '/' },
-  { label: 'Our Companies', to: '/our-companies' },
-  { label: 'CSI', to: '/corporate-social-investment' },
-  { label: 'Contact', to: '/contact' },
+  { label: 'Our Companies', to: '/our-companies/' },
+  { label: 'CSI', to: '/corporate-social-investment/' },
+  { label: 'Contact', to: '/contact/' },
 ]
 
 export default function Nav({ topOffset = 0, alwaysSolid = false }) {

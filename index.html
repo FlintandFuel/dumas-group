@@ -1,132 +1,120 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-ZA">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0A0B0D" />
 
-    <!-- Primary Meta -->
-    <title>Dumas Group South Africa | Coal, Chrome &amp; Limestone Mining and Export</title>
-    <meta name="description" content="Dumas Group is a South African mining and industrial holding group. 500,000t of coal exported annually, chrome and limestone from mining rights in Mpumalanga and the Northern Cape to buyers in 12+ export markets." />
-    <meta name="robots" content="index, follow" />
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
+    <link rel="apple-touch-icon" href="%BASE_URL%apple-touch-icon.png" />
+
+    <!-- Primary meta (homepage defaults; each route overrides these at runtime and in its prerendered HTML) -->
+    <title>Dumas Group | Diversified Holdings Company, South Africa</title>
+    <meta name="description" content="Johannesburg-based diversified holdings company investing in mineral exploration, energy and housing development across South Africa and the SADC region." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <link rel="canonical" href="https://dumasgroup.co.za/" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_ZA" />
+    <meta property="og:site_name" content="Dumas Group" />
     <meta property="og:url" content="https://dumasgroup.co.za/" />
-    <meta property="og:title" content="Dumas Group South Africa | Coal, Chrome &amp; Limestone Mining and Export" />
-    <meta property="og:description" content="A South African mining and industrial group. Coal, chrome and limestone, from mining rights through to buyers in twelve countries." />
-    <meta property="og:image" content="https://dumasgroup.co.za/images/coal-excavator.jpg" />
-    <meta property="og:site_name" content="Dumas Group South Africa" />
+    <meta property="og:title" content="Dumas Group | Diversified Holdings Company, South Africa" />
+    <meta property="og:description" content="Johannesburg-based diversified holdings company investing in mineral exploration, energy and housing development across South Africa and the SADC region." />
+    <meta property="og:image" content="https://dumasgroup.co.za/images/og-dumas-group.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Excavator loading coal at a Dumas Group mining operation" />
 
-    <!-- Twitter Card -->
+    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Dumas Group South Africa | Coal, Chrome &amp; Limestone Mining and Export" />
-    <meta name="twitter:description" content="A South African mining and industrial group. Coal, chrome and limestone, from mining rights through to buyers in twelve countries." />
+    <meta name="twitter:title" content="Dumas Group | Diversified Holdings Company, South Africa" />
+    <meta name="twitter:description" content="Johannesburg-based diversified holdings company investing in mineral exploration, energy and housing development across South Africa and the SADC region." />
+    <meta name="twitter:image" content="https://dumasgroup.co.za/images/og-dumas-group.jpg" />
 
-    <!-- Fonts: Archivo (display), IBM Plex Sans (body), IBM Plex Mono (data) -->
+    <!-- Fonts: Archivo (display), IBM Plex Sans (body), IBM Plex Mono (data), Poppins (proof figures) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,500;0,600;0,700;0,800;1,600&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet" />
 
-    <!-- JSON-LD Schema: Organization -->
+    <!-- Structured data: Organization + WebSite (site-wide). FAQPage markup is added by the Home route. -->
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
       "@type": "Organization",
       "@id": "https://dumasgroup.co.za/#organization",
-      "name": "Dumas Group South Africa",
-      "alternateName": "Dumas Group",
+      "name": "Dumas Group",
+      "alternateName": "Dumas Group South Africa",
       "url": "https://dumasgroup.co.za/",
+      "logo": "https://dumasgroup.co.za/icon-192.png",
+      "image": "https://dumasgroup.co.za/images/og-dumas-group.jpg",
       "foundingDate": "2008",
-      "description": "South African mining and industrial holding group. Coal, chrome and limestone mining and export, with non-mining subsidiaries in steel, renewable energy, property development, ICT and electrical engineering.",
+      "description": "Diversified holdings company investing in mineral exploration, energy generation and housing development across South Africa and the SADC region.",
+      "email": "info@dumasgroup.co.za",
+      "telephone": "+27101003132",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Building 3, 4th Floor, 11 Alice Lane, Sandhurst",
+        "addressLocality": "Sandton",
+        "addressRegion": "Gauteng",
+        "postalCode": "2196",
         "addressCountry": "ZA"
       },
-      "areaServed": [
-        {"@type": "State", "name": "Mpumalanga"},
-        {"@type": "State", "name": "Northern Cape"},
-        {"@type": "State", "name": "North West"},
-        {"@type": "State", "name": "Free State"},
-        {"@type": "State", "name": "Gauteng"}
-      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+27101003132",
+        "email": "info@dumasgroup.co.za",
+        "areaServed": "ZA",
+        "availableLanguage": "en"
+      },
       "subOrganization": [
         {
           "@type": "Organization",
           "name": "Nyezi Mining Holdings",
-          "description": "Mineral exploration, acquisition and extraction across the group's mining rights.",
-          "areaServed": ["Mpumalanga", "North West", "Free State", "Gauteng", "Northern Cape"]
+          "url": "https://nyezimining.co.za/"
         },
         {
           "@type": "Organization",
           "name": "Nyezi Steel",
-          "description": "Manufacturing and distribution of steel products for construction, automotive and infrastructure."
+          "url": "https://nyezisteel.com/"
         },
         {
           "@type": "Organization",
           "name": "AET Group",
           "alternateName": "The African Energy Technology Company",
-          "description": "Renewable energy and off-grid power development."
+          "url": "https://aetgroup.africa/"
         },
         {
           "@type": "Organization",
-          "name": "Apexion",
-          "description": "Turnkey electrical, control and instrumentation solutions."
+          "name": "Apexion"
         },
         {
           "@type": "Organization",
-          "name": "Boffin Property Development & Construction",
-          "description": "End-to-end property development and construction."
+          "name": "Boffin Property Development & Construction"
         },
         {
           "@type": "Organization",
           "name": "DVP Hub",
-          "alternateName": "DVP HUB (PTY) LTD",
-          "description": "ICT infrastructure management, security and cloud solutions."
+          "url": "https://www.dvphub.com/"
         }
       ]
-    }
-    </script>
-
-    <!-- JSON-LD Schema: FAQ -->
-    <script type="application/ld+json">
+    },
     {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Do you own the mining rights, or broker them?",
-          "acceptedAnswer": { "@type": "Answer", "text": "We hold the mining rights directly across our coal, chrome and limestone operations in Mpumalanga and the Northern Cape. We are not a broker or intermediary. Rights, extraction, processing, logistics and export are owned or operated within the group." }
-        },
-        {
-          "@type": "Question",
-          "name": "What volume can you commit to, and over what term?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Current annual production is approximately 500,000t of coal exported and 300,000t supplied domestically, alongside 120,000t of chrome. Term commitments are structured per offtake agreement and confirmed in the capability pack." }
-        },
-        {
-          "@type": "Question",
-          "name": "How does product reach port?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Product moves by a combination of rail and road, roughly 1,600 tons per day, with approximately 20,000 tons passing through port each month." }
-        },
-        {
-          "@type": "Question",
-          "name": "What grades and specifications do you supply?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Full grade, sizing and assay specifications for coal, chrome and limestone are set out on our commodities page and confirmed in the capability pack." }
-        },
-        {
-          "@type": "Question",
-          "name": "Which markets do you currently serve?",
-          "acceptedAnswer": { "@type": "Answer", "text": "We currently serve 12+ export markets across Asia and India, with a smaller share into Europe." }
-        },
-        {
-          "@type": "Question",
-          "name": "Who handles licensing and compliance?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Licensing and compliance are managed directly within the group across each mining right and operating entity." }
-        }
-      ]
+      "@type": "WebSite",
+      "@id": "https://dumasgroup.co.za/#website",
+      "url": "https://dumasgroup.co.za/",
+      "name": "Dumas Group",
+      "inLanguage": "en-ZA",
+      "publisher": {
+        "@id": "https://dumasgroup.co.za/#organization"
+      }
     }
+  ]
+}
     </script>
   </head>
   <body>

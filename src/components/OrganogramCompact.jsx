@@ -18,7 +18,7 @@ export default function OrganogramCompact() {
         <span className="font-mono text-[10px] font-semibold tracking-[0.06em] uppercase text-[#F2F3F4] leading-tight">{c.name}</span>
       </a>
     ) : (
-      <Link key={c.slug} to={`/our-companies#company-${c.slug}`} className={cls}>
+      <Link key={c.slug} to={`/our-companies/#company-${c.slug}`} className={cls}>
         <span className="font-mono text-[10px] font-semibold tracking-[0.06em] uppercase text-[#F2F3F4] leading-tight">{c.name}</span>
       </Link>
     )

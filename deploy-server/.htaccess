@@ -1,0 +1,46 @@
+# Dumas Group - Apache / cPanel configuration. Upload to the web root (public_html) with the site.
+# Every page is a real folder with its own index.html (prerendered), so no catch-all rewrite is
+# needed and unknown URLs return a genuine 404 (see 404.html).
+
+DirectoryIndex index.html
+Options -Indexes
+ErrorDocument 404 /404.html
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # One canonical origin: https + no www (matches the canonical tags and sitemap)
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteRule ^ https://dumasgroup.co.za%{REQUEST_URI} [L,R=301]
+
+  # Old WordPress URLs -> closest page on the new site
+  RewriteRule ^sector-focus/?$      /our-companies/                  [L,R=301]
+  RewriteRule ^commodities/?$       /our-companies/                  [L,R=301]
+  RewriteRule ^projects/?$          /                                [L,R=301]
+  RewriteRule ^boffin/?$            /our-companies/#company-boffin   [L,R=301,NE]
+  RewriteRule ^cookie-policy-za/?$  /privacy-policy/#cookies         [L,R=301,NE]
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/javascript application/json image/svg+xml text/xml
+</IfModule>
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresDefault "access plus 1 month"
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType text/xml "access plus 1 day"
+  ExpiresByType text/plain "access plus 1 day"
+</IfModule>
+
+<IfModule mod_headers.c>
+  # Build output in /assets has content-hashed filenames, safe to cache for a year
+  <FilesMatch "^index-.*\.(js|css)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>

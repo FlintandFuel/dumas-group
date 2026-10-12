@@ -401,9 +401,19 @@ function FAQ() {
 // =====================================================================
 export default function Home() {
   usePageMeta({
-    title: 'Dumas Group South Africa | Coal, Chrome & Limestone Mining and Export',
-    description: 'Dumas Group is a South African mining and industrial holding group. 500,000t of coal exported annually, chrome and limestone from mining rights in Mpumalanga and the Northern Cape to buyers in 12+ export markets.',
+    title: 'Dumas Group | Diversified Holdings Company, South Africa',
+    description: 'Johannesburg-based diversified holdings company investing in mineral exploration, energy and housing development across South Africa and the SADC region.',
     canonical: 'https://dumasgroup.co.za/',
+    // Mirrors the visible FAQ section exactly (search guidelines require markup to match page content).
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: faqs.map((f) => ({
+        '@type': 'Question',
+        name: f.q,
+        acceptedAnswer: { '@type': 'Answer', text: f.a },
+      })),
+    },
   })
 
   return (

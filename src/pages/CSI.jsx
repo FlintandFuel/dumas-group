@@ -5,7 +5,7 @@ const focusAreas = ['Education', 'Skills development', 'Healthcare', 'Environmen
 export default function CSI() {
   usePageMeta({
     title: 'Corporate Social Investment | Dumas Group South Africa',
-    description: 'Dumas Group’s corporate social investment focuses on education, skills development, healthcare and environmental sustainability in the communities where we operate.',
+    description: 'Corporate social investment at Dumas Group: education, skills development, healthcare and environmental sustainability in the communities where we operate.',
     canonical: 'https://dumasgroup.co.za/corporate-social-investment/',
   })
 

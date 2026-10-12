@@ -3,7 +3,8 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 
 export default defineConfig({
-  base: '/dumas-group/',
+  // Defaults to the GitHub Pages subpath. Server builds set DEPLOY_BASE=/ (see build:server).
+  base: process.env.DEPLOY_BASE || '/dumas-group/',
   plugins: [react()],
   resolve: {
     alias: {

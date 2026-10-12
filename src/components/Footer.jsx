@@ -4,9 +4,9 @@ import { contact } from '../content/dumas'
 
 const navLinks = [
   ['Home', '/'],
-  ['Our Companies', '/our-companies'],
-  ['CSI', '/corporate-social-investment'],
-  ['Contact', '/contact'],
+  ['Our Companies', '/our-companies/'],
+  ['CSI', '/corporate-social-investment/'],
+  ['Contact', '/contact/'],
 ]
 
 export default function Footer() {
@@ -46,6 +46,11 @@ export default function Footer() {
             <a href="https://flintandfuel.co.za" target="_blank" rel="noopener" className="underline hover:text-white/50 transition-colors">
               Flint and Fuel Creative
             </a>
+          </p>
+          <p className="text-xs text-white/60 leading-relaxed text-center mt-2">
+            <Link to="/privacy-policy/" className="inline-flex items-center min-h-[44px] underline hover:text-white transition-colors">Privacy notice</Link>
+            {' '}&middot;{' '}
+            <Link to="/privacy-policy/#cookies" className="inline-flex items-center min-h-[44px] underline hover:text-white transition-colors">Cookies</Link>
           </p>
         </div>
       </div>

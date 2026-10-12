@@ -22,7 +22,7 @@ export default function GroupStructureSection() {
           <div className="lg:col-span-7 lg:pt-2">
             <FadeUp delay={0.08}>
               <Link
-                to="/our-companies"
+                to="/our-companies/"
                 className="font-mono text-[11px] font-semibold tracking-[0.18em] uppercase text-white hover:text-[#B7BBBF] transition-colors inline-flex items-center gap-2"
               >
                 See how the group fits together

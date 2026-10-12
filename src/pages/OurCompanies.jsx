@@ -12,7 +12,7 @@ export default function OurCompanies() {
 
   usePageMeta({
     title: 'Our Companies | Dumas Group South Africa',
-    description: 'How the Dumas Group companies fit together: Nyezi Mining Holdings, Nyezi Steel, AET Group, Apexion, Boffin and DVP Hub, across Mpumalanga, the Northern Cape and Gauteng.',
+    description: 'How the Dumas Group companies fit together: Nyezi Mining Holdings, Nyezi Steel, AET Group, Apexion, Boffin and DVP Hub.',
     canonical: 'https://dumasgroup.co.za/our-companies/',
   })
 
