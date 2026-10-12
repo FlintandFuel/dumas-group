@@ -23,7 +23,7 @@ export const privacySections = [
       'Building 3, 4th Floor, 11 Alice Lane, Sandhurst, Sandton, 2196',
       'Email: info@dumasgroup.co.za',
       'Phone: 010 100 3132',
-      'Information Officer: [Name of Information Officer and direct email address]',
+      'Information Officer: Andrea Nunes, andrea@dumasgroup.co.za',
     ],
   },
   {
@@ -48,7 +48,7 @@ export const privacySections = [
       'meet our legal and regulatory obligations.',
     ],
     after:
-      'Our grounds under POPIA are your consent when you submit the form, steps taken at your request before entering a contract, our legitimate interest in responding to enquiries and running our business, and legal obligation where it applies. We do not sell personal information and we do not make automated decisions about you. [Confirm: we do not send marketing emails or newsletters. If this changes, we will ask for your consent first.]',
+      'Our grounds under POPIA are your consent when you submit the form, steps taken at your request before entering a contract, our legitimate interest in responding to enquiries and running our business, and legal obligation where it applies. We do not sell personal information and we do not make automated decisions about you. We do not send marketing emails or newsletters. If that ever changes, we will ask for your consent first.',
   },
   {
     id: 'who-we-share-with',
@@ -57,7 +57,7 @@ export const privacySections = [
       'We use a small number of service providers (operators under POPIA) who process information on our behalf and may only use it for that purpose:',
     ],
     list: [
-      'HubSpot: receives and stores contact form submissions and manages our enquiry records. [Confirm HubSpot data centre region; the form is currently served from HubSpot\'s EU region.]',
+      'HubSpot: receives and stores contact form submissions and manages our enquiry records. Submissions are stored in HubSpot\'s European (EU1) data centre.',
       'Google: provides the map on our Contact page and the fonts used on the site.',
       '[Name of website hosting provider]: hosts the website.',
     ],
@@ -75,11 +75,11 @@ export const privacySections = [
     id: 'cookies',
     heading: 'Cookies and third-party services',
     paragraphs: [
-      'Our own website does not set cookies and does not use analytics, advertising or tracking tools. It does not store information in your browser\'s local storage. [Confirm: no analytics or tracking has been added to the site since this draft.]',
+      'Our own website does not set cookies and does not use analytics, advertising or tracking tools. It does not store information in your browser\'s local storage.',
       'The Contact page loads content from third parties, and those services can set their own cookies or receive your IP address when the content loads:',
     ],
     list: [
-      'HubSpot (contact form). At the time of writing the only cookie we observed was a short-lived security cookie called __cf_bm, set by HubSpot\'s network provider to identify automated bots. It expires after about 30 minutes. [Re-check before publishing.]',
+      'HubSpot (contact form). At the time of writing the only cookie we observed was a short-lived security cookie called __cf_bm, set by HubSpot\'s network provider to identify automated bots. It expires after about 30 minutes.',
       'Google Maps (map on the Contact page) and Google Fonts (typefaces). Google receives your IP address and browser details when these load and may set its own cookies.',
     ],
     after:
@@ -89,7 +89,7 @@ export const privacySections = [
     id: 'keeping-it',
     heading: 'How long we keep it',
     paragraphs: [
-      'We keep enquiry information only for as long as we need it for the purpose it was collected, or as long as the law requires. [Confirm retention period, for example: three years after our last contact with you.] After that we delete it or remove anything that identifies you.',
+      'We keep enquiry information for three years after our last contact with you, unless the law or a contract requires us to keep it for longer. After that we delete it or remove anything that identifies you.',
     ],
   },
   {
@@ -115,11 +115,9 @@ export const privacySections = [
     regulator: {
       label: 'Information Regulator (South Africa)',
       lines: [
-        'JD House, 27 Stiemens Street, Braamfontein, Johannesburg, 2001',
-        'Complaints: complaints.IR@justice.gov.za',
-        'General enquiries: inforeg@justice.gov.za',
+        'Complaints: PAIAComplaints@inforegulator.org.za',
+        'Enquiries: enquiries@inforegulator.org.za',
         'Website: inforegulator.org.za',
-        '[Confirm current contact details on the Regulator\'s website before publishing.]',
       ],
     },
   },
