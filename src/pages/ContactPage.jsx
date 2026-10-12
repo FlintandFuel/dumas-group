@@ -1,4 +1,5 @@
-import { FadeUp, SectionLabel, usePageMeta } from '../lib/shared'
+import { Link } from 'react-router-dom'
+import { FadeUp, SectionLabel, usePageMeta, SHOW_PRIVACY_NOTICE } from '../lib/shared'
 import { contact } from '../content/dumas'
 import HubSpotForm from '../components/HubSpotForm'
 import CapabilityPackCTA from '../components/CapabilityPackCTA'
@@ -59,6 +60,14 @@ export default function ContactPage() {
             <div className="lg:col-span-7">
               <FadeUp delay={0.1}>
                 <HubSpotForm />
+                <p className="mt-6 text-sm text-[#4B4F54] leading-relaxed">
+                  We use the details you submit only to respond to your enquiry. To ask what we hold about you, or to have it
+                  corrected or deleted, email our Information Officer at{' '}
+                  <a href="mailto:andrea@dumasgroup.co.za" className="underline hover:text-[#16171A]">andrea@dumasgroup.co.za</a>.
+                  {SHOW_PRIVACY_NOTICE && (
+                    <>{' '}See our <Link to="/privacy-policy/" className="underline hover:text-[#16171A]">privacy notice</Link>.</>
+                  )}
+                </p>
               </FadeUp>
             </div>
           </div>

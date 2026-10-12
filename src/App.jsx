@@ -8,7 +8,7 @@ import CSI from './pages/CSI'
 import ContactPage from './pages/ContactPage'
 import CapabilityPackPage from './pages/CapabilityPackPage'
 import PrivacyPolicy from './pages/PrivacyPolicy'
-import { SHOW_CAPABILITY_PACK } from './lib/shared'
+import { SHOW_CAPABILITY_PACK, SHOW_PRIVACY_NOTICE } from './lib/shared'
 import './index.css'
 
 // Scrolls to a #hash target on navigation (client-side routing doesn't do this for you),
@@ -51,8 +51,8 @@ export default function App() {
           <Route path="/projects" element={<Navigate to="/#projects" replace />} />
           <Route path="/boffin" element={<Navigate to="/our-companies/#company-boffin" replace />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/cookie-policy-za" element={<Navigate to="/privacy-policy/#cookies" replace />} />
+          <Route path="/privacy-policy" element={SHOW_PRIVACY_NOTICE ? <PrivacyPolicy /> : <Navigate to="/" replace />} />
+          <Route path="/cookie-policy-za" element={<Navigate to={SHOW_PRIVACY_NOTICE ? '/privacy-policy/#cookies' : '/'} replace />} />
           <Route path="/capability-pack" element={SHOW_CAPABILITY_PACK ? <CapabilityPackPage /> : <Navigate to="/contact" replace />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

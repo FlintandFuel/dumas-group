@@ -8,6 +8,10 @@ export const SHOW_CAPABILITY_PACK = false
 // draft banner and is noindexed. Set to false once approved (see src/content/privacy.js).
 export const PRIVACY_NOTICE_DRAFT = true
 
+// The server (go-live) build sets VITE_HIDE_PRIVACY=1 so the draft page and its footer links stay out of
+// the public site until the notice is approved. The GitHub Pages review build leaves it unset.
+export const SHOW_PRIVACY_NOTICE = import.meta.env.VITE_HIDE_PRIVACY !== '1'
+
 export const img = (filename) => `${import.meta.env.BASE_URL}images/${filename}`
 
 export function FadeUp({ children, delay = 0, className = '', ...rest }) {

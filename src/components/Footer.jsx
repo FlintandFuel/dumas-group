@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { img } from '../lib/shared'
+import { img, SHOW_PRIVACY_NOTICE } from '../lib/shared'
 import { contact } from '../content/dumas'
 
 const navLinks = [
@@ -47,11 +47,11 @@ export default function Footer() {
               Flint and Fuel Creative
             </a>
           </p>
-          <p className="text-xs text-white/60 leading-relaxed text-center mt-2">
+          {SHOW_PRIVACY_NOTICE && <p className="text-xs text-white/60 leading-relaxed text-center mt-2">
             <Link to="/privacy-policy/" className="inline-flex items-center min-h-[44px] underline hover:text-white transition-colors">Privacy notice</Link>
             {' '}&middot;{' '}
             <Link to="/privacy-policy/#cookies" className="inline-flex items-center min-h-[44px] underline hover:text-white transition-colors">Cookies</Link>
-          </p>
+          </p>}
         </div>
       </div>
     </footer>

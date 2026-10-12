@@ -11,7 +11,9 @@ const http = require('http')
 const { chromium } = require('playwright')
 
 const dist = path.resolve(process.argv[2] || 'dist-server')
-const ROUTES = ['/', '/our-companies/', '/corporate-social-investment/', '/contact/', '/privacy-policy/']
+const ROUTES = ['/', '/our-companies/', '/corporate-social-investment/', '/contact/']
+// The privacy page is only baked in when the build includes it (VITE_HIDE_PRIVACY unset).
+if (process.env.VITE_HIDE_PRIVACY !== '1') ROUTES.push('/privacy-policy/')
 const TYPES = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg', '.webp': 'image/webp', '.json': 'application/json' }
 
 const server = http.createServer((req, res) => {
