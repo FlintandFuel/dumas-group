@@ -1,12 +1,9 @@
-// Privacy notice copy. FIRST DRAFT for Dumas Group to review; not yet approved and not legal advice.
-// Anything in [square brackets] is a fact we could not verify and must be confirmed or replaced
-// before publishing. The page highlights those parts automatically.
-//
-// When the notice is approved: set PRIVACY_NOTICE_DRAFT to false in src/lib/shared.jsx (removes the
-// draft banner and the noindex tag), fill in every [bracket], and add /privacy-policy/ to sitemap.xml.
+// Privacy notice copy (POPIA). Published 13 October 2026; company details supplied by the client.
+// Not legal advice: have a legal adviser review it. Any new unverified fact should go in [square
+// brackets]; the page highlights those parts automatically.
 
 export const privacyMeta = {
-  lastUpdated: '[Date of approval]',
+  lastUpdated: '13 October 2026',
   intro:
     'This notice explains how Dumas Group South Africa ("Dumas Group", "we", "us") collects, uses, shares and protects personal information when you visit dumasgroup.co.za or contact us through it. We handle personal information in line with the Protection of Personal Information Act 4 of 2013 (POPIA).',
 }
@@ -19,7 +16,7 @@ export const privacySections = [
       'The responsible party for the personal information described in this notice is:',
     ],
     list: [
-      '[Registered company name and registration number]',
+      'Dumas Group (Pty) Ltd, registration number 2008/017282/07',
       'Building 3, 4th Floor, 11 Alice Lane, Sandhurst, Sandton, 2196',
       'Email: info@dumasgroup.co.za',
       'Phone: 010 100 3132',
@@ -59,7 +56,7 @@ export const privacySections = [
     list: [
       'HubSpot: receives and stores contact form submissions and manages our enquiry records. Submissions are stored in HubSpot\'s European (EU1) data centre.',
       'Google: provides the map on our Contact page and the fonts used on the site.',
-      '[Name of website hosting provider]: hosts the website.',
+      'Xneelo: hosts the website.',
     ],
     after:
       'We may also disclose information to our professional advisers, or to a regulator or court, where the law requires it.',

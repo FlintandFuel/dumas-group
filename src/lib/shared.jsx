@@ -4,9 +4,9 @@ import { motion, useReducedMotion } from 'framer-motion'
 // Flip to true once the capability pack document is final. Hides every CTA, link and the section itself.
 export const SHOW_CAPABILITY_PACK = false
 
-// The privacy notice is a first draft awaiting client and legal review. While true the page shows a
-// draft banner and is noindexed. Set to false once approved (see src/content/privacy.js).
-export const PRIVACY_NOTICE_DRAFT = true
+// Privacy notice review state. While true the page shows a draft banner and is noindexed.
+// Published 13 October 2026 with the client's company details; set back to true to re-draft.
+export const PRIVACY_NOTICE_DRAFT = false
 
 // The server (go-live) build sets VITE_HIDE_PRIVACY=1 so the draft page and its footer links stay out of
 // the public site until the notice is approved. The GitHub Pages review build leaves it unset.

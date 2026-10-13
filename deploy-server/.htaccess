@@ -20,11 +20,8 @@ ErrorDocument 404 /404.html
   RewriteRule ^commodities/?$       /our-companies/                  [L,R=301]
   RewriteRule ^projects/?$          /                                [L,R=301]
   RewriteRule ^boffin/?$            /our-companies/#company-boffin   [L,R=301,NE]
-  # The privacy notice is not published yet, so both old policy URLs go to the home page.
-  # When it is published, DELETE the privacy-policy rule below and change the cookie rule to:
-  #   RewriteRule ^cookie-policy-za/?$  /privacy-policy/#cookies  [L,R=301,NE]
-  RewriteRule ^privacy-policy/?$    /                                [L,R=301]
-  RewriteRule ^cookie-policy-za/?$  /                                [L,R=301]
+  # Old cookie policy -> cookie section of the new privacy notice (/privacy-policy/ is a real page)
+  RewriteRule ^cookie-policy-za/?$  /privacy-policy/#cookies         [L,R=301,NE]
 </IfModule>
 
 <IfModule mod_deflate.c>
