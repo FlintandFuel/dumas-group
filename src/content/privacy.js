@@ -31,6 +31,7 @@ export const privacySections = [
       'Contact form: the first name, last name, email address, phone number and message you type into the form on our Contact page.',
       'Correspondence: anything you send us by email or tell us when you phone, and our replies.',
       'Technical information: your IP address, browser type, device and the pages requested. This is recorded by our hosting provider and by the third-party services the site loads (see "Cookies and third-party services").',
+      'Analytics (only if you accept): how you use the site, such as pages viewed, how you arrived, your approximate location and your device and browser, collected through Google Analytics.',
     ],
     after:
       'We do not ask for special personal information (such as health, religion or biometric details) or information about children.',
@@ -55,7 +56,7 @@ export const privacySections = [
     ],
     list: [
       'HubSpot: receives and stores contact form submissions and manages our enquiry records. Submissions are stored in HubSpot\'s European (EU1) data centre.',
-      'Google: provides the map on our Contact page and the fonts used on the site.',
+      'Google: provides the map on our Contact page, the fonts used on the site and, only if you accept analytics cookies, Google Analytics, which reports how the site is used.',
       'Xneelo: hosts the website.',
     ],
     after:
@@ -72,15 +73,16 @@ export const privacySections = [
     id: 'cookies',
     heading: 'Cookies and third-party services',
     paragraphs: [
-      'Our own website does not set cookies and does not use analytics, advertising or tracking tools. It does not store information in your browser\'s local storage.',
-      'The Contact page loads content from third parties, and those services can set their own cookies or receive your IP address when the content loads:',
+      'Our own website sets no cookies unless you accept analytics. It stores one entry in your browser\'s local storage to remember your cookie choice, and it does not use advertising or tracking tools.',
+      'The first time you visit, a notice asks whether you accept analytics cookies. If you decline, no analytics cookies are set. You can change your choice at any time with the "Cookie settings" link in the footer. The site also loads content from third parties, and those services can set their own cookies or receive your IP address when the content loads:',
     ],
     list: [
+      'Google Analytics (only if you accept). Sets cookies beginning with _ga, which last up to two years, to tell visits and visitors apart and to report how the site is used. Google may process this information on servers outside South Africa.',
       'HubSpot (contact form). At the time of writing the only cookie we observed was a short-lived security cookie called __cf_bm, set by HubSpot\'s network provider to identify automated bots. It expires after about 30 minutes.',
       'Google Maps (map on the Contact page) and Google Fonts (typefaces). Google receives your IP address and browser details when these load and may set its own cookies.',
     ],
     after:
-      'You can block or delete cookies in your browser settings. Blocking third-party content may stop the contact form or map from displaying. If we later add analytics or marketing cookies, we will ask for your consent before they are set and update this section.',
+      'You can block or delete cookies in your browser settings. Blocking third-party content may stop the contact form or map from displaying. If we add any other category of cookie in future, we will ask for your consent before it is set and update this section.',
   },
   {
     id: 'keeping-it',

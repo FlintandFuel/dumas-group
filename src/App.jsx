@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import Nav from './components/Nav'
 import Footer from './components/Footer'
+import CookieConsent from './components/CookieConsent'
 import Home from './pages/Home'
 import OurCompanies from './pages/OurCompanies'
 import CSI from './pages/CSI'
@@ -58,6 +59,7 @@ export default function App() {
         </Routes>
       </main>
       <Footer />
+      <CookieConsent />
     </div>
   )
 }

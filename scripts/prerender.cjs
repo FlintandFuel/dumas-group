@@ -40,6 +40,8 @@ const server = http.createServer((req, res) => {
       // Third-party form scripts and the frames they inject must not be baked in.
       document.querySelectorAll('script[src*="hsforms"], script[src*="hubspot"]').forEach((n) => n.remove())
       document.querySelectorAll('.hs-form-frame').forEach((n) => (n.innerHTML = ''))
+      // The cookie banner is per-visitor state, never part of the static page.
+      document.querySelectorAll('[data-cookie-banner]').forEach((n) => n.remove())
       return { head: document.head.innerHTML, root: document.getElementById('root').innerHTML }
     })
     const html = `<!doctype html>\n<html lang="en-ZA">\n<head>${head}</head>\n<body>\n<div id="root">${root}</div>\n</body>\n</html>\n`
